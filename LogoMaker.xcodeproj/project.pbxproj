@@ -13,6 +13,18 @@
 		936ADFB12660363900A0AF0F /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAC2660363900A0AF0F /* libsfml-system.2.5.1.dylib */; };
 		936ADFB22660363900A0AF0F /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAD2660363900A0AF0F /* libsfml-window.2.5.1.dylib */; };
 		936ADFB32660363900A0AF0F /* libsfml-network.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAE2660363900A0AF0F /* libsfml-network.2.5.1.dylib */; };
+		936ADFB62660381600A0AF0F /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB42660381600A0AF0F /* Slider.cpp */; };
+		936ADFBA2660396C00A0AF0F /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB72660396C00A0AF0F /* History.cpp */; };
+		936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB82660396C00A0AF0F /* Snapshot.cpp */; };
+		936ADFBC2660396C00A0AF0F /* States.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB92660396C00A0AF0F /* States.cpp */; };
+		936ADFC52660399300A0AF0F /* Snapshot.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBD2660399300A0AF0F /* Snapshot.hpp */; };
+		936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */; };
+		936ADFC72660399300A0AF0F /* GUIComponent.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBF2660399300A0AF0F /* GUIComponent.hpp */; };
+		936ADFC82660399300A0AF0F /* States.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC02660399300A0AF0F /* States.hpp */; };
+		936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */; };
+		936ADFCA2660399300A0AF0F /* History.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC22660399300A0AF0F /* History.hpp */; };
+		936ADFCB2660399300A0AF0F /* MouseEvents.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC32660399300A0AF0F /* MouseEvents.hpp */; };
+		936ADFCC2660399300A0AF0F /* EventHandler.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC42660399300A0AF0F /* EventHandler.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,6 +34,14 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				936ADFC52660399300A0AF0F /* Snapshot.hpp in CopyFiles */,
+				936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in CopyFiles */,
+				936ADFC72660399300A0AF0F /* GUIComponent.hpp in CopyFiles */,
+				936ADFC82660399300A0AF0F /* States.hpp in CopyFiles */,
+				936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in CopyFiles */,
+				936ADFCA2660399300A0AF0F /* History.hpp in CopyFiles */,
+				936ADFCB2660399300A0AF0F /* MouseEvents.hpp in CopyFiles */,
+				936ADFCC2660399300A0AF0F /* EventHandler.hpp in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -35,6 +55,19 @@
 		936ADFAC2660363900A0AF0F /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "ExternalLibrary/SFML/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
 		936ADFAD2660363900A0AF0F /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "ExternalLibrary/SFML/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
 		936ADFAE2660363900A0AF0F /* libsfml-network.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.5.1.dylib"; path = "ExternalLibrary/SFML/lib/libsfml-network.2.5.1.dylib"; sourceTree = "<group>"; };
+		936ADFB42660381600A0AF0F /* Slider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Slider.cpp; sourceTree = "<group>"; };
+		936ADFB52660381600A0AF0F /* Slider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Slider.hpp; sourceTree = "<group>"; };
+		936ADFB72660396C00A0AF0F /* History.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = History.cpp; sourceTree = "<group>"; };
+		936ADFB82660396C00A0AF0F /* Snapshot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Snapshot.cpp; sourceTree = "<group>"; };
+		936ADFB92660396C00A0AF0F /* States.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = States.cpp; sourceTree = "<group>"; };
+		936ADFBD2660399300A0AF0F /* Snapshot.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Snapshot.hpp; sourceTree = "<group>"; };
+		936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SnapshotInterface.hpp; sourceTree = "<group>"; };
+		936ADFBF2660399300A0AF0F /* GUIComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GUIComponent.hpp; sourceTree = "<group>"; };
+		936ADFC02660399300A0AF0F /* States.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = States.hpp; sourceTree = "<group>"; };
+		936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		936ADFC22660399300A0AF0F /* History.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = History.hpp; sourceTree = "<group>"; };
+		936ADFC32660399300A0AF0F /* MouseEvents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MouseEvents.hpp; sourceTree = "<group>"; };
+		936ADFC42660399300A0AF0F /* EventHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EventHandler.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +106,20 @@
 		936ADFA1266032CB00A0AF0F /* LogoMaker */ = {
 			isa = PBXGroup;
 			children = (
+				936ADFC42660399300A0AF0F /* EventHandler.hpp */,
+				936ADFBF2660399300A0AF0F /* GUIComponent.hpp */,
+				936ADFC22660399300A0AF0F /* History.hpp */,
+				936ADFC32660399300A0AF0F /* MouseEvents.hpp */,
+				936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */,
+				936ADFBD2660399300A0AF0F /* Snapshot.hpp */,
+				936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */,
+				936ADFC02660399300A0AF0F /* States.hpp */,
+				936ADFB92660396C00A0AF0F /* States.cpp */,
+				936ADFB72660396C00A0AF0F /* History.cpp */,
+				936ADFB82660396C00A0AF0F /* Snapshot.cpp */,
 				936ADFA2266032CB00A0AF0F /* main.cpp */,
+				936ADFB42660381600A0AF0F /* Slider.cpp */,
+				936ADFB52660381600A0AF0F /* Slider.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -146,6 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936ADFBA2660396C00A0AF0F /* History.cpp in Sources */,
+				936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */,
+				936ADFBC2660396C00A0AF0F /* States.cpp in Sources */,
+				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,
 				936ADFA3266032CB00A0AF0F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
