@@ -24,6 +24,8 @@ public:
     static void setStateEnable(ObjectState state, bool set);
     static sf::Font font;
     static bool loadFont;
+    static int TEXT_SIZE;
+    
     
 private:
     static std::map<ObjectState, bool> states;
