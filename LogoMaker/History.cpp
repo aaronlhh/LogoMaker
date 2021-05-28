@@ -8,7 +8,7 @@
 #include "History.hpp"
 
 
-Stack<Snapshot> History::stack;
+std::stack<Snapshot> History::stack;
 
 
 void History::pushHistory(const Snapshot& snapshot){
@@ -17,11 +17,11 @@ void History::pushHistory(const Snapshot& snapshot){
 
 
 Snapshot History::topHistory(){
-    if(stack.top().is_null()){
+    if(stack.empty()){
         Snapshot temp("");
         return temp;
     }
-    return *stack.top();
+    return stack.top();
 }
 
 

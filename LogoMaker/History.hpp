@@ -8,13 +8,13 @@
 #ifndef History_hpp
 #define History_hpp
 #include <map>
-#include "stack.h"
+#include <stack>
 #include "GUIComponent.hpp"
 
 class History{
 
 private:
-    static Stack<Snapshot> stack;
+    static std::stack<Snapshot> stack;
 public:
     static void pushHistory(const Snapshot& snapshot);
     static Snapshot topHistory();
