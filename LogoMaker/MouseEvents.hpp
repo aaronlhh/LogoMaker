@@ -80,11 +80,9 @@ bool MouseEvents<T>::mouseTripleClicked(){
 
 template <class T>
 bool MouseEvents<T>::draggedOver(T& object, sf::RenderWindow& window, sf::Event event){
-    if(mouseClicked(object, window)){
-        while( event.type != event.MouseButtonReleased ){
-            if(event.type == event.MouseMoved){
-                return true;
-            }
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+        if( event.type != event.MouseButtonReleased && event.type == event.MouseMoved){
+            return true;
         }
     }
     return false;
@@ -93,7 +91,7 @@ bool MouseEvents<T>::draggedOver(T& object, sf::RenderWindow& window, sf::Event 
 template <class T>
 bool MouseEvents<T>::hovered(T& object, sf::RenderWindow& window){
     sf::Vector2i pos = sf::Mouse::getPosition(window);
-    if( object.getLocalBounds().contains(pos.x, pos.y) ){
+    if( object.getGlobalBounds().contains(pos.x, pos.y) ){
         return true;
     }else{
         return false;
