@@ -16,10 +16,6 @@ public:
     Slider(string label);
     Slider(string label, float length);
     
-    // disable copy and assignment operations in case of errors
-    Slider(const Slider& other) = delete;
-    Slider& operator=(const Slider& other) = delete;
-    
     // modification for slider
     void setPosition(float x, float y);         // set position of slider
     void setMax(float max);                 // set max number of slider
@@ -27,6 +23,9 @@ public:
     
     // accessors
     int getCurVal();
+    string getLabel();
+    sf::FloatRect getGlobalBounds();
+    sf::Vector2f getPosition();
     
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;

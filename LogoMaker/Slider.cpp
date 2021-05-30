@@ -88,6 +88,24 @@ int Slider::getCurVal(){
     return relPos;
 }
 
+string Slider::getLabel(){
+    string temp = label.getString();
+    return temp;
+}
+
+sf::FloatRect Slider::getGlobalBounds(){
+    sf::FloatRect rect;
+    rect.left = label.getPosition().x;
+    rect.top = label.getPosition().y;
+    rect.width = label.getGlobalBounds().width + slider.getGlobalBounds().width + curVal.getGlobalBounds().width+40;
+    rect.height = label.getCharacterSize();
+    return rect;
+}
+
+sf::Vector2f Slider::getPosition(){
+    return label.getPosition();
+}
+
 void Slider::addEventHandler(sf::RenderWindow& window, sf::Event event){
     if(MouseEvents<sf::CircleShape>::draggedOver(knob, window, event)){
         knob.setFillColor(sf::Color::Green);
