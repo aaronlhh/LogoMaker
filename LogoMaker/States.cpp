@@ -12,6 +12,8 @@ sf::Font States::font;
 
 bool States::loadFont = false;
 int States::TEXT_SIZE = 35;
+int States::WINDOW_WIDTH = 1500;
+int States::WINDOW_HEIGHT = 1500;
 
 States::States(){
 //    for(int i = static_cast<int>(APPEAR); i < static_cast<int>(LASTSTATE); i++){
