@@ -14,9 +14,9 @@ bool States::loadFont = false;
 int States::TEXT_SIZE = 35;
 
 States::States(){
-    for(int i = static_cast<int>(APPEAR); i < static_cast<int>(LASTSTATE); i++){
-        states[static_cast<ObjectState>(i)] = false;
-    }
+//    for(int i = static_cast<int>(APPEAR); i < static_cast<int>(LASTSTATE); i++){
+//        states[static_cast<ObjectState>(i)] = false;
+//    }
         
 }
 bool States::isStateEnabled(ObjectState state){
