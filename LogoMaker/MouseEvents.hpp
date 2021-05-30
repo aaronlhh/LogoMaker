@@ -80,7 +80,7 @@ bool MouseEvents<T>::mouseTripleClicked(){
 
 template <class T>
 bool MouseEvents<T>::draggedOver(T& object, sf::RenderWindow& window, sf::Event event){
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && hovered(object, window)){
         if( event.type != event.MouseButtonReleased && event.type == event.MouseMoved){
             return true;
         }

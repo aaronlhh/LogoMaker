@@ -25,6 +25,7 @@
 		936ADFCA2660399300A0AF0F /* History.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC22660399300A0AF0F /* History.hpp */; };
 		936ADFCB2660399300A0AF0F /* MouseEvents.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC32660399300A0AF0F /* MouseEvents.hpp */; };
 		936ADFCC2660399300A0AF0F /* EventHandler.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC42660399300A0AF0F /* EventHandler.hpp */; };
+		936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,8 @@
 		936ADFC22660399300A0AF0F /* History.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = History.hpp; sourceTree = "<group>"; };
 		936ADFC32660399300A0AF0F /* MouseEvents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MouseEvents.hpp; sourceTree = "<group>"; };
 		936ADFC42660399300A0AF0F /* EventHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EventHandler.hpp; sourceTree = "<group>"; };
+		936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BottomMenu.cpp; sourceTree = "<group>"; };
+		936ADFCE26606F7A00A0AF0F /* BottomMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BottomMenu.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +109,12 @@
 		936ADFA1266032CB00A0AF0F /* LogoMaker */ = {
 			isa = PBXGroup;
 			children = (
+				936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */,
 				936ADFC42660399300A0AF0F /* EventHandler.hpp */,
 				936ADFBF2660399300A0AF0F /* GUIComponent.hpp */,
 				936ADFC22660399300A0AF0F /* History.hpp */,
 				936ADFB72660396C00A0AF0F /* History.cpp */,
 				936ADFC32660399300A0AF0F /* MouseEvents.hpp */,
-				936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */,
 				936ADFBD2660399300A0AF0F /* Snapshot.hpp */,
 				936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */,
 				936ADFC02660399300A0AF0F /* States.hpp */,
@@ -120,6 +123,8 @@
 				936ADFA2266032CB00A0AF0F /* main.cpp */,
 				936ADFB42660381600A0AF0F /* Slider.cpp */,
 				936ADFB52660381600A0AF0F /* Slider.hpp */,
+				936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */,
+				936ADFCE26606F7A00A0AF0F /* BottomMenu.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				936ADFBA2660396C00A0AF0F /* History.cpp in Sources */,
 				936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */,
 				936ADFBC2660396C00A0AF0F /* States.cpp in Sources */,
+				936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */,
 				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,
 				936ADFA3266032CB00A0AF0F /* main.cpp in Sources */,
 			);
