@@ -21,16 +21,25 @@ public:
     
     // BottomMenu sliders enum
     enum sliderType { TEXT_OPACITY, FONT_SIZE, SKEW, SHADOW_OPACITY,
-        BACKGROUND_OPACITY, TEXT_X_AXIS, TEXT_Y_AXIS,
+        BACKGROUND_OPACITY,ROTATE_CW, ROTATE_CCW, TEXT_X_AXIS, TEXT_Y_AXIS,
         SHADOW_X_AXIS, SHADOW_Y_AXIS};
     
+    // fonts
+    enum fonts {ARIAL, CHARTER, SIGNPAINTER, OPENSANS};
     
-    States();
+    // colors
+    enum colors {RED, YELLOW, GREEN, LIGHTBLUE, BLUE, PURPLE, BLACK, WHITE};
+
+    
+    // global accessors and mutators
     void operator=(const States& other);
     static bool isStateEnabled(ObjectState state);
     static void setStateEnable(ObjectState state, bool set);
-    static sf::Font font;
-    static bool loadFont;
+    
+    static bool isFontLoaded(fonts font);
+    static void setFontLoad(fonts font, bool set);
+    static sf::Font& getFont(fonts font);
+    
     static int TEXT_SIZE;
     static int WINDOW_WIDTH;
     static int WINDOW_HEIGHT;
@@ -38,8 +47,8 @@ public:
     
 private:
     static std::map<ObjectState, bool> states;
-    
-    
+    static std::map<fonts, bool> fontsLoaded;
+    static std::map<fonts, sf::Font> fontList;
     
 };
 

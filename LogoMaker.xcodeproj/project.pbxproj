@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935050A02666F4B4002CCAA2 /* ColorSquare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */; };
+		935050A32666FA17002CCAA2 /* ColorList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935050A12666FA17002CCAA2 /* ColorList.cpp */; };
+		93516F8926645BB400DE7F32 /* SignPainter.ttc in Copy Files */ = {isa = PBXBuildFile; fileRef = 93516F8626645BB400DE7F32 /* SignPainter.ttc */; };
+		93516F8A26645BB400DE7F32 /* Arial.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = 93516F8726645BB400DE7F32 /* Arial.ttf */; };
+		93516F8B26645BB400DE7F32 /* Charter.ttc in Copy Files */ = {isa = PBXBuildFile; fileRef = 93516F8826645BB400DE7F32 /* Charter.ttc */; };
+		93516F912665834E00DE7F32 /* LogoMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F8F2665834E00DE7F32 /* LogoMaker.cpp */; };
+		93516F94266585F000DE7F32 /* TextInputBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F92266585F000DE7F32 /* TextInputBox.cpp */; };
+		93516F97266586F900DE7F32 /* Cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F95266586F900DE7F32 /* Cursor.cpp */; };
+		93516F9A2665886F00DE7F32 /* Typing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F982665886F00DE7F32 /* Typing.cpp */; };
+		93516F9D2665908100DE7F32 /* TextInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F9B2665908100DE7F32 /* TextInput.cpp */; };
 		936ADFA3266032CB00A0AF0F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFA2266032CB00A0AF0F /* main.cpp */; };
 		936ADFAF2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAA2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib */; };
 		936ADFB02660363900A0AF0F /* libsfml-audio.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAB2660363900A0AF0F /* libsfml-audio.2.5.1.dylib */; };
@@ -17,38 +27,59 @@
 		936ADFBA2660396C00A0AF0F /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB72660396C00A0AF0F /* History.cpp */; };
 		936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB82660396C00A0AF0F /* Snapshot.cpp */; };
 		936ADFBC2660396C00A0AF0F /* States.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFB92660396C00A0AF0F /* States.cpp */; };
-		936ADFC52660399300A0AF0F /* Snapshot.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBD2660399300A0AF0F /* Snapshot.hpp */; };
-		936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */; };
-		936ADFC72660399300A0AF0F /* GUIComponent.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFBF2660399300A0AF0F /* GUIComponent.hpp */; };
-		936ADFC82660399300A0AF0F /* States.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC02660399300A0AF0F /* States.hpp */; };
-		936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */; };
-		936ADFCA2660399300A0AF0F /* History.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC22660399300A0AF0F /* History.hpp */; };
-		936ADFCB2660399300A0AF0F /* MouseEvents.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC32660399300A0AF0F /* MouseEvents.hpp */; };
-		936ADFCC2660399300A0AF0F /* EventHandler.hpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936ADFC42660399300A0AF0F /* EventHandler.hpp */; };
+		936ADFC52660399300A0AF0F /* Snapshot.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFBD2660399300A0AF0F /* Snapshot.hpp */; };
+		936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */; };
+		936ADFC72660399300A0AF0F /* GUIComponent.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFBF2660399300A0AF0F /* GUIComponent.hpp */; };
+		936ADFC82660399300A0AF0F /* States.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC02660399300A0AF0F /* States.hpp */; };
+		936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */; };
+		936ADFCA2660399300A0AF0F /* History.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC22660399300A0AF0F /* History.hpp */; };
+		936ADFCB2660399300A0AF0F /* MouseEvents.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC32660399300A0AF0F /* MouseEvents.hpp */; };
+		936ADFCC2660399300A0AF0F /* EventHandler.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC42660399300A0AF0F /* EventHandler.hpp */; };
 		936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		936ADF9D266032CB00A0AF0F /* CopyFiles */ = {
+		936ADF9D266032CB00A0AF0F /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				936ADFC52660399300A0AF0F /* Snapshot.hpp in CopyFiles */,
-				936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in CopyFiles */,
-				936ADFC72660399300A0AF0F /* GUIComponent.hpp in CopyFiles */,
-				936ADFC82660399300A0AF0F /* States.hpp in CopyFiles */,
-				936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in CopyFiles */,
-				936ADFCA2660399300A0AF0F /* History.hpp in CopyFiles */,
-				936ADFCB2660399300A0AF0F /* MouseEvents.hpp in CopyFiles */,
-				936ADFCC2660399300A0AF0F /* EventHandler.hpp in CopyFiles */,
+				93516F8926645BB400DE7F32 /* SignPainter.ttc in Copy Files */,
+				93516F8A26645BB400DE7F32 /* Arial.ttf in Copy Files */,
+				93516F8B26645BB400DE7F32 /* Charter.ttc in Copy Files */,
+				936ADFC52660399300A0AF0F /* Snapshot.hpp in Copy Files */,
+				936ADFC62660399300A0AF0F /* SnapshotInterface.hpp in Copy Files */,
+				936ADFC72660399300A0AF0F /* GUIComponent.hpp in Copy Files */,
+				936ADFC82660399300A0AF0F /* States.hpp in Copy Files */,
+				936ADFC92660399300A0AF0F /* OpenSans-Bold.ttf in Copy Files */,
+				936ADFCA2660399300A0AF0F /* History.hpp in Copy Files */,
+				936ADFCB2660399300A0AF0F /* MouseEvents.hpp in Copy Files */,
+				936ADFCC2660399300A0AF0F /* EventHandler.hpp in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSquare.cpp; sourceTree = "<group>"; };
+		9350509F2666F4B4002CCAA2 /* ColorSquare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ColorSquare.hpp; sourceTree = "<group>"; };
+		935050A12666FA17002CCAA2 /* ColorList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorList.cpp; sourceTree = "<group>"; };
+		935050A22666FA17002CCAA2 /* ColorList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ColorList.hpp; sourceTree = "<group>"; };
+		93516F8626645BB400DE7F32 /* SignPainter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttc; sourceTree = "<group>"; };
+		93516F8726645BB400DE7F32 /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
+		93516F8826645BB400DE7F32 /* Charter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charter.ttc; sourceTree = "<group>"; };
+		93516F8F2665834E00DE7F32 /* LogoMaker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogoMaker.cpp; sourceTree = "<group>"; };
+		93516F902665834E00DE7F32 /* LogoMaker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogoMaker.hpp; sourceTree = "<group>"; };
+		93516F92266585F000DE7F32 /* TextInputBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextInputBox.cpp; sourceTree = "<group>"; };
+		93516F93266585F000DE7F32 /* TextInputBox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextInputBox.hpp; sourceTree = "<group>"; };
+		93516F95266586F900DE7F32 /* Cursor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cursor.cpp; sourceTree = "<group>"; };
+		93516F96266586F900DE7F32 /* Cursor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cursor.hpp; sourceTree = "<group>"; };
+		93516F982665886F00DE7F32 /* Typing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Typing.cpp; sourceTree = "<group>"; };
+		93516F992665886F00DE7F32 /* Typing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Typing.hpp; sourceTree = "<group>"; };
+		93516F9B2665908100DE7F32 /* TextInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextInput.cpp; sourceTree = "<group>"; };
+		93516F9C2665908100DE7F32 /* TextInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextInput.hpp; sourceTree = "<group>"; };
 		936ADF9F266032CB00A0AF0F /* LogoMaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogoMaker; sourceTree = BUILT_PRODUCTS_DIR; };
 		936ADFA2266032CB00A0AF0F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		936ADFAA2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "ExternalLibrary/SFML/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
@@ -109,6 +140,9 @@
 		936ADFA1266032CB00A0AF0F /* LogoMaker */ = {
 			isa = PBXGroup;
 			children = (
+				93516F8726645BB400DE7F32 /* Arial.ttf */,
+				93516F8826645BB400DE7F32 /* Charter.ttc */,
+				93516F8626645BB400DE7F32 /* SignPainter.ttc */,
 				936ADFC12660399300A0AF0F /* OpenSans-Bold.ttf */,
 				936ADFC42660399300A0AF0F /* EventHandler.hpp */,
 				936ADFBF2660399300A0AF0F /* GUIComponent.hpp */,
@@ -125,6 +159,20 @@
 				936ADFB52660381600A0AF0F /* Slider.hpp */,
 				936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */,
 				936ADFCE26606F7A00A0AF0F /* BottomMenu.hpp */,
+				93516F8F2665834E00DE7F32 /* LogoMaker.cpp */,
+				93516F902665834E00DE7F32 /* LogoMaker.hpp */,
+				93516F92266585F000DE7F32 /* TextInputBox.cpp */,
+				93516F93266585F000DE7F32 /* TextInputBox.hpp */,
+				93516F95266586F900DE7F32 /* Cursor.cpp */,
+				93516F96266586F900DE7F32 /* Cursor.hpp */,
+				93516F982665886F00DE7F32 /* Typing.cpp */,
+				93516F992665886F00DE7F32 /* Typing.hpp */,
+				93516F9B2665908100DE7F32 /* TextInput.cpp */,
+				93516F9C2665908100DE7F32 /* TextInput.hpp */,
+				9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */,
+				9350509F2666F4B4002CCAA2 /* ColorSquare.hpp */,
+				935050A12666FA17002CCAA2 /* ColorList.cpp */,
+				935050A22666FA17002CCAA2 /* ColorList.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -150,7 +198,7 @@
 			buildPhases = (
 				936ADF9B266032CB00A0AF0F /* Sources */,
 				936ADF9C266032CB00A0AF0F /* Frameworks */,
-				936ADF9D266032CB00A0AF0F /* CopyFiles */,
+				936ADF9D266032CB00A0AF0F /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -197,12 +245,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93516F9A2665886F00DE7F32 /* Typing.cpp in Sources */,
 				936ADFBA2660396C00A0AF0F /* History.cpp in Sources */,
 				936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */,
+				93516F9D2665908100DE7F32 /* TextInput.cpp in Sources */,
+				935050A02666F4B4002CCAA2 /* ColorSquare.cpp in Sources */,
+				935050A32666FA17002CCAA2 /* ColorList.cpp in Sources */,
 				936ADFBC2660396C00A0AF0F /* States.cpp in Sources */,
 				936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */,
+				93516F97266586F900DE7F32 /* Cursor.cpp in Sources */,
 				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,
 				936ADFA3266032CB00A0AF0F /* main.cpp in Sources */,
+				93516F912665834E00DE7F32 /* LogoMaker.cpp in Sources */,
+				93516F94266585F000DE7F32 /* TextInputBox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
