@@ -7,14 +7,14 @@
 
 #ifndef Slider_hpp
 #define Slider_hpp
-#include "States.hpp"
+#include "GUIComponent.hpp"
 
 class Slider: public sf::Drawable, public sf::Transformable{
 public:
     // constructors
     Slider();
     Slider(string label);
-    Slider(string label, float length);
+    Slider(string label, float length, float defaultVal = 0);
     
     // modification for slider
     void setPosition(float x, float y);         // set position of slider
@@ -26,7 +26,7 @@ public:
     string getLabel();
     sf::FloatRect getGlobalBounds();
     sf::Vector2f getPosition();
-    
+
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void addEventHandler(sf::RenderWindow& window, sf::Event event);

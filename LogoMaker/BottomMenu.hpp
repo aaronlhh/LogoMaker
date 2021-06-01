@@ -8,6 +8,7 @@
 #ifndef BottomMenu_hpp
 #define BottomMenu_hpp
 #include "Slider.hpp"
+#include "TextInput.hpp"
 
 class BottomMenu: public sf::Drawable, public sf::Transformable{
 public:
@@ -17,6 +18,7 @@ public:
     
     // accessors
     int getSliderValue(States::sliderType key);
+    string getLogoText();
     
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
@@ -27,6 +29,8 @@ public:
 private:
     std::map<States::sliderType, int> sliderIndex;              // <sliderType, index of slider in vector>
     std::vector<Slider> sliders;
+    TextInput inputBox;
+    
 };
 
 #endif /* BottomMenu_hpp */

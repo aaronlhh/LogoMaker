@@ -20,24 +20,25 @@ Slider::Slider(string label)
 }
 
 
-Slider::Slider(string label, float length){
+Slider::Slider(string label, float length, float defaultVal){
+    
+    // relative position of knob is initially zero
+    relPos = defaultVal;
+    
     // setup font
-    if(!States::loadFont){
-        if(!States::font.loadFromFile("OpenSans-Bold.ttf")){
-            cout << "Unable to find text file\n";
-        }
-        States::loadFont = true;
+    if(!States::isFontLoaded(States::OPENSANS)){
+        States::setFontLoad(States::OPENSANS, true);
     }
     
     // setup label and curVal
-    this->label.setFont(States::font);
+    this->label.setFont(States::getFont(States::OPENSANS));
     this->label.setCharacterSize(States::TEXT_SIZE);
     this->label.setFillColor(sf::Color::White);
     this->label.setString(label+":  ");
-    this->curVal.setFont(States::font);
+    this->curVal.setFont(States::getFont(States::OPENSANS));
     this->curVal.setCharacterSize(States::TEXT_SIZE);
     this->curVal.setFillColor(sf::Color::White);
-    this->curVal.setString("0");
+    this->curVal.setString(to_string(relPos));
     
     // setup bar
     this->slider.setSize({length, 3});
@@ -46,9 +47,6 @@ Slider::Slider(string label, float length){
     // setup knob
     this->knob.setRadius(15);
     this->knob.setFillColor(sf::Color::White);
-    
-    // relative position of knob is initially zero
-    relPos = 0;
     
     // initialize position
     setupPosition();
