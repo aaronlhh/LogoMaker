@@ -13,6 +13,8 @@ ColorGradient::ColorGradient(sf::Color color){
     int height = 256;
     int width = 256;
     gradients.resize(height*width);      // color range 0-255
+    background.setSize({256, 256});
+    background.setFillColor(sf::Color::Black);
     setColor(color);
 }
 
@@ -31,6 +33,7 @@ void ColorGradient::setPosition(float x, float y){
             vertex.position = sf::Vector2f(x+j,y+i);
         }
     }
+    background.setPosition(x, y);
 }
 
 
@@ -79,5 +82,6 @@ void ColorGradient::setColor(sf::Color color){
 
 
 void ColorGradient::draw(sf::RenderTarget& window, sf::RenderStates states) const{
+    window.draw(background);
     window.draw(gradients);
 }

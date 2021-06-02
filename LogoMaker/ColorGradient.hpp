@@ -31,6 +31,7 @@ public:
     
 private:
     sf::VertexArray gradients;  // array of points with diff. colors
+    sf::RectangleShape background;
 };
 
 #endif /* ColorGradient_hpp */
