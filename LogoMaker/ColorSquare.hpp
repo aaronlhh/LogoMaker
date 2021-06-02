@@ -12,6 +12,7 @@
 class ColorSquare: public sf::RectangleShape{
 public:
     ColorSquare(sf::Color color);
+    ColorSquare();
     
     // accessors
     sf::Color getColor();
