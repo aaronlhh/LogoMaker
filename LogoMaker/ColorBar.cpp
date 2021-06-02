@@ -9,11 +9,11 @@
 
 ColorBar::ColorBar(){
     // setting texts
-    if(!States::isFontLoaded(States::OPENSANS)){
-        States::setFontLoad(States::OPENSANS, true);
+    if(!States::isFontLoaded(States::ARIAL)){
+        States::setFontLoad(States::ARIAL, true);
     }
-    textLabel.setFont(States::getFont(States::OPENSANS));
-    backgroundLabel.setFont(States::getFont(States::OPENSANS));
+    textLabel.setFont(States::getFont(States::ARIAL, States::REGULAR));
+    backgroundLabel.setFont(States::getFont(States::ARIAL, States::REGULAR));
     textLabel.setCharacterSize(textColor.getGlobalBounds().height/3*2);
     backgroundLabel.setCharacterSize(textColor.getGlobalBounds().height/3*2);
     textLabel.setFillColor(sf::Color::White);

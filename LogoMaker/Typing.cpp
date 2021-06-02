@@ -11,10 +11,10 @@
 
 Typing::Typing(){
     
-    if(!States::isFontLoaded(States::OPENSANS)){
-        States::setFontLoad(States::OPENSANS, true);
+    if(!States::isFontLoaded(States::ARIAL)){
+        States::setFontLoad(States::ARIAL, true);
     }
-    text.setFont(States::getFont(States::OPENSANS));
+    text.setFont(States::getFont(States::ARIAL, States::REGULAR));
     text.setFillColor(sf::Color::White);
     text.setCharacterSize(cursor.getSize().y);
     text.setString("");

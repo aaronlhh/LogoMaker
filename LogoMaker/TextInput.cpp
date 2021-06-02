@@ -11,10 +11,10 @@ TextInput::TextInput(){
     label.setString("Logo Text:");
     label.setCharacterSize(20);
     
-    if(!States::isFontLoaded(States::OPENSANS)){
-        States::setFontLoad(States::OPENSANS, true);
+    if(!States::isFontLoaded(States::ARIAL)){
+        States::setFontLoad(States::ARIAL, true);
     }
-    label.setFont(States::getFont(States::OPENSANS));
+    label.setFont(States::getFont(States::ARIAL, States::REGULAR));
     typing.setSize(textBox.getGlobalBounds().height - textBox.getOutlineThickness()*4);
     
     // setup positions

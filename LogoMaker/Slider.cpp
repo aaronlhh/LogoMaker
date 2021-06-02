@@ -26,16 +26,16 @@ Slider::Slider(string label, float length, float defaultVal){
     relPos = defaultVal;
     
     // setup font
-    if(!States::isFontLoaded(States::OPENSANS)){
-        States::setFontLoad(States::OPENSANS, true);
+    if(!States::isFontLoaded(States::ARIAL)){
+        States::setFontLoad(States::ARIAL, true);
     }
     
     // setup label and curVal
-    this->label.setFont(States::getFont(States::OPENSANS));
+    this->label.setFont(States::getFont(States::ARIAL, States::REGULAR));
     this->label.setCharacterSize(States::TEXT_SIZE);
     this->label.setFillColor(sf::Color::White);
     this->label.setString(label+":  ");
-    this->curVal.setFont(States::getFont(States::OPENSANS));
+    this->curVal.setFont(States::getFont(States::ARIAL, States::REGULAR));
     this->curVal.setCharacterSize(States::TEXT_SIZE);
     this->curVal.setFillColor(sf::Color::White);
     this->curVal.setString(to_string(relPos));
