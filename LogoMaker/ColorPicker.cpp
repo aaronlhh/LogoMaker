@@ -70,7 +70,7 @@ void ColorPicker::addEventHandler(sf::RenderWindow &window, sf::Event event){
     
     // click on gradient
     else if(MouseEvents<ColorGradient>::mouseClicked(gradient, window) && showGradient){
-        colorGot = gradient.getColor(pos);
+        square.setColor(gradient.getColor(pos));
     }
     
     // click window but not square/list/gradient
