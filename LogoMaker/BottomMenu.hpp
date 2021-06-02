@@ -9,6 +9,7 @@
 #define BottomMenu_hpp
 #include "Slider.hpp"
 #include "TextInput.hpp"
+#include "ColorBar.hpp"
 
 class BottomMenu: public sf::Drawable, public sf::Transformable{
 public:
@@ -30,6 +31,7 @@ private:
     std::map<States::sliderType, int> sliderIndex;              // <sliderType, index of slider in vector>
     std::vector<Slider> sliders;
     TextInput inputBox;
+    ColorBar bar;
     
 };
 
