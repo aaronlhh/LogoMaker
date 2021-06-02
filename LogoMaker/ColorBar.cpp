@@ -46,7 +46,13 @@ sf::FloatRect ColorBar::getGlobalBounds(){
     return rect;
 }
 
+sf::Color ColorBar::getTextColor(){
+    return textColor.getColor();
+}
 
+sf::Color ColorBar::getBackGroundColor(){
+    return backgroundColor.getColor();
+}
 
 void ColorBar::draw(sf::RenderTarget &window, sf::RenderStates states) const{
     window.draw(textColor);

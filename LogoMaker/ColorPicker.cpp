@@ -38,6 +38,10 @@ void ColorPicker::setPosition(float x, float y){
     list.setPosition(x, y + square.getGlobalBounds().height);
 }
 
+sf::Color ColorPicker::getColor(){
+    return square.getColor();
+}
+
 
 void ColorPicker::addEventHandler(sf::RenderWindow &window, sf::Event event){
     sf::Vector2i pos = sf::Mouse::getPosition(window);

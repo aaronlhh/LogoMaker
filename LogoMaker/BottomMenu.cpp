@@ -102,6 +102,14 @@ string BottomMenu::getLogoText(){
     return inputBox.getString();
 }
 
+sf::Color BottomMenu::getTextColor(){
+    return bar.getTextColor();
+}
+
+sf::Color BottomMenu::getBackGroundColor(){
+    return bar.getBackGroundColor();
+}
+
 void BottomMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
     for(int i = 0; i < sliders.size(); i ++){
         window.draw(sliders.at(i));

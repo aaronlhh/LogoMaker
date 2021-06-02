@@ -20,6 +20,8 @@ public:
     // accessors
     int getSliderValue(States::sliderType key);
     string getLogoText();
+    sf::Color getTextColor();
+    sf::Color getBackGroundColor();
     
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
