@@ -13,7 +13,7 @@ std::map<States::fonts, std::vector<sf::Font>> States::fontList;
 
 int States::TEXT_SIZE = 35;
 int States::WINDOW_WIDTH = 1500;
-int States::WINDOW_HEIGHT = 1500;
+int States::WINDOW_HEIGHT = 1400;
 
 bool States::isStateEnabled(ObjectState state){
     return states[state];

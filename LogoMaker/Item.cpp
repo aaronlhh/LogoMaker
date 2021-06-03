@@ -10,7 +10,7 @@
 
 Item::Item(string msg, sf::Vector2f vec){
     box.setSize(vec);
-    box.setFillColor(sf::Color::Transparent);
+    box.setFillColor(sf::Color::Black);
     
     if(!States::isFontLoaded(States::ARIAL)){
         States::setFontLoad(States::ARIAL, true);

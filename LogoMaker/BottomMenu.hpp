@@ -10,6 +10,7 @@
 #include "Slider.hpp"
 #include "TextInput.hpp"
 #include "ColorBar.hpp"
+#include "FontSetting.hpp"
 
 class BottomMenu: public sf::Drawable, public sf::Transformable{
 public:
@@ -22,6 +23,7 @@ public:
     string getLogoText();
     sf::Color getTextColor();
     sf::Color getBackGroundColor();
+    sf::Font getFont();
     
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
@@ -34,6 +36,7 @@ private:
     std::vector<Slider> sliders;
     TextInput inputBox;
     ColorBar bar;
+    FontSetting fontList;
     
 };
 

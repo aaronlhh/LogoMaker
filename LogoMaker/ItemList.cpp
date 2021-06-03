@@ -8,8 +8,7 @@
 #include "ItemList.hpp"
 
 ItemList::ItemList(){
-//    font.loadFromFile("OpenSans-Bold.ttf");
-//    add("Something");
+
 }
 
 
@@ -66,20 +65,27 @@ string ItemList::getClicked(){
     return word;
 }
 
+bool ItemList::isClicked(){
+    return click;
+}
+
+void ItemList::toggleClick(){
+    click = false;
+}
+
 
 void ItemList::addEventHandler(sf::RenderWindow& window, sf::Event event){
     for(int i = 0; i < itemlist.size(); i++){
         if(MouseEvents<Item>::hovered(itemlist.at(i), window)){
             itemlist.at(i).setFillColor(sf::Color::Blue);
         }else{
-            itemlist.at(i).setFillColor(sf::Color::Transparent);
+            itemlist.at(i).setFillColor(sf::Color::Black);
         }
         
         if(MouseEvents<Item>::mouseClicked(itemlist.at(i), window)){
             // if mouse clicked on an option, closed the bar
             // set clicked state to be true
-            States::setStateEnable(States::APPEAR, false);
-            States::setStateEnable(States::CLICKED, true);
+            click = true;
             word = itemlist.at(i).getText();
         }
     }

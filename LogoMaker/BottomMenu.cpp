@@ -14,9 +14,13 @@ BottomMenu::BottomMenu(){
     // adding sliders
     int index = 0;
     
-    Slider rotateCW = Slider("Rotate CW", 360);
-    sliderIndex[States::ROTATE_CW] = index++;
-    sliders.push_back(rotateCW);
+    Slider textRotate = Slider("Text Rotate", 360);
+    sliderIndex[States::TEXT_ROTATE] = index++;
+    sliders.push_back(textRotate);
+    
+    Slider shadowRotate = Slider("Shadow Rotate", 360);
+    sliderIndex[States::SHADOW_ROTATE] = index++;
+    sliders.push_back(shadowRotate);
     
     Slider textOpa = Slider("Text Opacity", 255, 255);
     sliderIndex[States::TEXT_OPACITY] = index++;
@@ -38,11 +42,11 @@ BottomMenu::BottomMenu(){
     sliderIndex[States::SKEW] = index++;
     sliders.push_back(backgroundOpa);
 
-    Slider xAxis = Slider("Test X-Axis", 1000, 239);
+    Slider xAxis = Slider("Text X-Axis", 1000, 239);
     sliderIndex[States::TEXT_X_AXIS] = index++;
     sliders.push_back(xAxis);
 
-    Slider yAxis = Slider("Test Y-Axis", 1000, 164);
+    Slider yAxis = Slider("Text Y-Axis", 1000, 164);
     sliderIndex[States::TEXT_Y_AXIS] = index++;
     sliders.push_back(yAxis);
 
@@ -57,7 +61,7 @@ BottomMenu::BottomMenu(){
 
     
     // setup positions
-    setPosition(30, States::WINDOW_HEIGHT/2);
+    setPosition(40, States::WINDOW_HEIGHT/2);
 }
 
 
@@ -67,28 +71,37 @@ void BottomMenu::setPosition(float x, float y){
     
     inputBox.setPosition(x, y);
     
+    fontList.setPosition(x, y + inputBox.getGlobalBounds().height + 10);
+    bar.setPosition(fontList.getPosition().x + fontList.getGlobalBounds().width + horiPadding*2,
+                    fontList.getPosition().y + 30);
     
-    sliders.at(0).setPosition(x, y + inputBox.getGlobalBounds().height + 10);
-    bar.setPosition(sliders.at(0).getPosition().x + sliders.at(0).getGlobalBounds().width + horiPadding,
-                    sliders.at(0).getPosition().y);
     
-    sliders.at(1).setPosition(x, sliders.at(0).getPosition().y + sliders.at(0).getGlobalBounds().height + vertPadding);
-    sliders.at(2).setPosition(sliders.at(1).getPosition().x + sliders.at(1).getGlobalBounds().width + horiPadding,
-                              sliders.at(1).getPosition().y);
+    sliders.at(0).setPosition(x, bar.getGlobalBounds().top + bar.getGlobalBounds().height + 20);
+    sliders.at(1).setPosition(sliders.at(0).getPosition().x + sliders.at(0).getGlobalBounds().width + horiPadding,
+                              sliders.at(0).getPosition().y );
+    
+    
+    sliders.at(2).setPosition(x, sliders.at(0).getPosition().y + sliders.at(0).getGlobalBounds().height + vertPadding);
     sliders.at(3).setPosition(sliders.at(2).getPosition().x + sliders.at(2).getGlobalBounds().width + horiPadding,
-                              sliders.at(1).getPosition().y);
+                              sliders.at(2).getPosition().y);
+    sliders.at(4).setPosition(sliders.at(3).getPosition().x + sliders.at(3).getGlobalBounds().width + horiPadding,
+                              sliders.at(2).getPosition().y);
     
     
-    sliders.at(4).setPosition(x,
-                              sliders.at(1).getPosition().y + sliders.at(1).getGlobalBounds().height + vertPadding);
-    sliders.at(5).setPosition(sliders.at(4).getPosition().x + sliders.at(4).getGlobalBounds().width + horiPadding,
-                              sliders.at(4).getPosition().y);
+    sliders.at(5).setPosition(x,
+                              sliders.at(2).getPosition().y + sliders.at(2).getGlobalBounds().height + vertPadding);
+    sliders.at(6).setPosition(sliders.at(5).getPosition().x + sliders.at(5).getGlobalBounds().width + horiPadding,
+                              sliders.at(5).getPosition().y);
     
     
-    sliders.at(6).setPosition(x, sliders.at(5).getPosition().y + sliders.at(5).getGlobalBounds().height + vertPadding);
-    sliders.at(7).setPosition(x, sliders.at(6).getPosition().y + sliders.at(6).getGlobalBounds().height + vertPadding);
-    sliders.at(8).setPosition(x, sliders.at(7).getPosition().y + sliders.at(7).getGlobalBounds().height + vertPadding);
-    sliders.at(9).setPosition(x, sliders.at(8).getPosition().y + sliders.at(8).getGlobalBounds().height + vertPadding);
+    sliders.at(7).setPosition(x,
+                              sliders.at(6).getPosition().y + sliders.at(6).getGlobalBounds().height + vertPadding);
+    sliders.at(8).setPosition(x,
+                              sliders.at(7).getPosition().y + sliders.at(7).getGlobalBounds().height + vertPadding);
+    sliders.at(9).setPosition(x,
+                              sliders.at(8).getPosition().y + sliders.at(8).getGlobalBounds().height + vertPadding);
+    sliders.at(10).setPosition(x,
+                              sliders.at(9).getPosition().y + sliders.at(9).getGlobalBounds().height + vertPadding);
 }
 
 
@@ -110,12 +123,17 @@ sf::Color BottomMenu::getBackGroundColor(){
     return bar.getBackGroundColor();
 }
 
+sf::Font BottomMenu::getFont(){
+    return States::getFont(fontList.getFont(), fontList.getStyle());
+}
+
 void BottomMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
     for(int i = 0; i < sliders.size(); i ++){
         window.draw(sliders.at(i));
     }
     window.draw(inputBox);
     window.draw(bar);
+    window.draw(fontList);
 }
 
 
@@ -123,6 +141,7 @@ void BottomMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
 void BottomMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
     inputBox.addEventHandler(window, event);
     bar.addEventHandler(window, event);
+    fontList.addEventHandler(window, event);
     for(int i = 0; i < sliders.size(); i ++){
         sliders.at(i).addEventHandler(window, event);
     }
@@ -133,4 +152,5 @@ void BottomMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
 
 void BottomMenu::update(){
     inputBox.update();
+    fontList.update();
 }

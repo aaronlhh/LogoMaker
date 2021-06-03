@@ -67,7 +67,7 @@ void InputBox::setSize(float x, float y){
 
 
 void InputBox::setPosition(float x, float y){
-    this->sf::RectangleShape::setPosition(x, y);
+    box.setPosition(x, y);
     text.setPosition(x + box.getGlobalBounds().width/2 - text.getGlobalBounds().width/2,
                      y + box.getGlobalBounds().height/2 - text.getGlobalBounds().height/1.5);
 }

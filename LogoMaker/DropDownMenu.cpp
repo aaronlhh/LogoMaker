@@ -7,41 +7,16 @@
 
 #include "DropDownMenu.hpp"
 
-
-void DropDownMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
-    window.draw(box);
-    if(States::isStateEnabled(States::APPEAR))
-        window.draw(menu);
+DropDownMenu::DropDownMenu(){
+    box.setText("");
+    appear = false;
 }
 
-
-void DropDownMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
-    
-    if(MouseEvents<InputBox>::mouseClicked(box, window)){
-        if(States::isStateEnabled(States::APPEAR))
-            States::setStateEnable(States::APPEAR, false);
-        else
-            States::setStateEnable(States::APPEAR, true);
-    }
-    
-    if(States::isStateEnabled(States::APPEAR)){
-        menu.addEventHandler(window, event);
-    }
-}
-
-
-void DropDownMenu::update(){
-    if(States::isStateEnabled(States::CLICKED)){
-        States::setStateEnable(States::CLICKED, false);
-        box.setText(menu.getClicked());
-        setPosition(x, y);
-    }
-}
-
-
-DropDownMenu::DropDownMenu()
-: DropDownMenu(vector<string>{"Arial"}){
-    
+DropDownMenu::DropDownMenu(string word){
+    box.setText(word);
+    menu.add(word);
+    setPosition(0, 0);
+    appear = false;
 }
 
 
@@ -54,12 +29,49 @@ DropDownMenu::DropDownMenu(vector<string> vec){
     for(int i = 0; i < vec.size(); i++){
         menu.add(vec.at(i));
     }
+    appear = false;
 }
+
+void DropDownMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
+    window.draw(box);
+    if(appear)
+        window.draw(menu);
+}
+
+
+void DropDownMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
+    
+    if(MouseEvents<InputBox>::mouseClicked(box, window)){
+        if(appear)
+            appear = false;
+        else
+            appear = true;
+    }else if(MouseEvents<ItemList>::mouseClicked(window, event) &&
+             !MouseEvents<ItemList>::hovered(menu, window)){
+        appear = false;
+    }
+    
+    if(appear){
+        menu.addEventHandler(window, event);
+    }
+}
+
+
+void DropDownMenu::update(){
+    if(menu.isClicked()){
+        menu.toggleClick();
+        appear = false;
+        box.setText(menu.getClicked());
+        setPosition(x, y);
+    }
+}
+
 
 
 void DropDownMenu::resize(float x, float y){
     box.setSize(x, y);
     menu.setSize(x, y);
+    setPosition(box.getPosition().x, box.getPosition().y);
 }
 
 
@@ -67,12 +79,16 @@ void DropDownMenu::setPosition(float x, float y){
     this->x = x;
     this->y = y;
     box.setPosition(x, y);
-    menu.setPosition(x, y + box.getGlobalBounds().height + 5);
+    menu.setPosition(x, y + box.getGlobalBounds().height);
 }
 
 
 void DropDownMenu::add(string item){
+    if(box.getText() == ""){
+        box.setText(item);
+    }
     menu.add(item);
+    setPosition(box.getPosition().x, box.getPosition().y);
 }
 
 
@@ -81,6 +97,10 @@ sf::Vector2f DropDownMenu::getPosition(){
     vec.x = this->x;
     vec.y = this->y;
     return vec;
+}
+
+string DropDownMenu::getText(){
+    return box.getText();
 }
 
 sf::FloatRect DropDownMenu::getGlobalBounds(){

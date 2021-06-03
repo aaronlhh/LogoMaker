@@ -21,7 +21,7 @@ public:
     
     // BottomMenu sliders enum
     enum sliderType { TEXT_OPACITY, FONT_SIZE, SKEW, SHADOW_OPACITY,
-        BACKGROUND_OPACITY,ROTATE_CW, TEXT_X_AXIS, TEXT_Y_AXIS,
+        BACKGROUND_OPACITY,TEXT_ROTATE,SHADOW_ROTATE, TEXT_X_AXIS, TEXT_Y_AXIS,
         SHADOW_X_AXIS, SHADOW_Y_AXIS};
     
     // fonts

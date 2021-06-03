@@ -16,6 +16,7 @@ class DropDownMenu: public sf::Drawable, public sf::Transformable{
 public:
     
     DropDownMenu();
+    DropDownMenu(string word);
     DropDownMenu(vector<string> vec);  // given list of string
     
     // setter
@@ -23,10 +24,12 @@ public:
     void setPosition(float x, float y);
     
     void add(string item);
+    void reset(vector<string> vec);
     
     // accessors
     sf::Vector2f getPosition();
     sf::FloatRect getGlobalBounds();
+    string getText();
     
     // GUI
     void draw(sf::RenderTarget& window, sf::RenderStates states) const;
@@ -35,11 +38,11 @@ public:
     
     
     
-    
 private:
     InputBox box;
     ItemList menu;
     float x, y;  // record the position
+    bool appear;
 };
 
 #endif /* DropdownMenu_hpp */

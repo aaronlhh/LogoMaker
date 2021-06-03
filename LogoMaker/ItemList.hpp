@@ -23,6 +23,8 @@ public:
     
     void add(string item);      // add an item to the list
     string getClicked();
+    bool isClicked();
+    void toggleClick();
     
     // GUI
     void addEventHandler(sf::RenderWindow& window, sf::Event event);
@@ -33,6 +35,7 @@ public:
 private:
     std::vector<Item> itemlist;
     string word;
+    bool click;
 };
 
 

@@ -38,8 +38,8 @@ void ColorBar::setPosition(float x, float y){
 
 sf::FloatRect ColorBar::getGlobalBounds(){
     sf::FloatRect rect;
-    rect.top = textColor.getPosition().y;
-    rect.left = textColor.getPosition().x;
+    rect.top = textColor.getGlobalBounds().top;
+    rect.left = textColor.getGlobalBounds().left;
     rect.width = textColor.getGlobalBounds().width + textLabel.getGlobalBounds().width + backgroundColor.getGlobalBounds().width + backgroundLabel.getGlobalBounds().width + 20*4;
     rect.height = textColor.getGlobalBounds().height;
     
