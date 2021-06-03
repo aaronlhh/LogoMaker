@@ -23,7 +23,7 @@ public:
     string getLogoText();
     sf::Color getTextColor();
     sf::Color getBackGroundColor();
-    sf::Font getFont();
+    sf::Font& getFont();
     
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;

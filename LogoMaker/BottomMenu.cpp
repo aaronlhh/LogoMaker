@@ -123,7 +123,7 @@ sf::Color BottomMenu::getBackGroundColor(){
     return bar.getBackGroundColor();
 }
 
-sf::Font BottomMenu::getFont(){
+sf::Font& BottomMenu::getFont(){
     return States::getFont(fontList.getFont(), fontList.getStyle());
 }
 
