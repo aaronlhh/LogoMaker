@@ -22,6 +22,7 @@ public:
     
     // get color that the user currently picked
     sf::Color getColor();
+    void setColor(sf::Color color);
     
     // GUI parts
     void addEventHandler(sf::RenderWindow& window, sf::Event event);

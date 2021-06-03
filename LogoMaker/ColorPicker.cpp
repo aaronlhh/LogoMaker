@@ -42,6 +42,10 @@ sf::Color ColorPicker::getColor(){
     return square.getColor();
 }
 
+void ColorPicker::setColor(sf::Color color){
+    square.setColor(color);
+}
+
 
 void ColorPicker::addEventHandler(sf::RenderWindow &window, sf::Event event){
     sf::Vector2i pos = sf::Mouse::getPosition(window);

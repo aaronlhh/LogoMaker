@@ -21,6 +21,8 @@ ColorBar::ColorBar(){
     textLabel.setString("Text Color");
     backgroundLabel.setString("Background Color");
     
+    backgroundColor.setColor(sf::Color::Black);
+    
     // setup initial pos
     setPosition(0, 0);
 }
@@ -33,7 +35,6 @@ void ColorBar::setPosition(float x, float y){
     backgroundColor.setPosition(textLabel.getPosition().x + textLabel.getGlobalBounds().width + horiPadding*2, y);
     backgroundLabel.setPosition(backgroundColor.getGlobalBounds().left + backgroundColor.getGlobalBounds().width + horiPadding, y);
 }
-
 
 
 sf::FloatRect ColorBar::getGlobalBounds(){

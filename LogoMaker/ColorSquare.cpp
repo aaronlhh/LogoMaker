@@ -27,6 +27,11 @@ sf::Color ColorSquare::getColor(){
 
 void ColorSquare::setColor(sf::Color color){
     setFillColor(color);
+    if(color == sf::Color::Black){
+        setOutlineColor(sf::Color::White);
+    }else{
+        setOutlineColor(sf::Color::Black);
+    }
 }
 
 
