@@ -22,6 +22,7 @@ ColorBar::ColorBar(){
     backgroundLabel.setString("Background Color");
     
     backgroundColor.setColor(sf::Color::Black);
+    textColor.setColor(sf::Color::Red);
     
     // setup initial pos
     setPosition(0, 0);
