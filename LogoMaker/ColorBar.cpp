@@ -47,11 +47,11 @@ sf::FloatRect ColorBar::getGlobalBounds(){
     return rect;
 }
 
-sf::Color& ColorBar::getTextColor(){
+sf::Color ColorBar::getTextColor(){
     return textColor.getColor();
 }
 
-sf::Color& ColorBar::getBackGroundColor(){
+sf::Color ColorBar::getBackGroundColor(){
     return backgroundColor.getColor();
 }
 

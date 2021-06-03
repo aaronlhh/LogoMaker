@@ -21,7 +21,7 @@ public:
     void setPosition(float x, float y);
     
     // get color that the user currently picked
-    sf::Color& getColor();
+    sf::Color getColor();
     void setColor(sf::Color color);
     
     // GUI parts

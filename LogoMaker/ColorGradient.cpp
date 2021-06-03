@@ -43,7 +43,7 @@ sf::FloatRect ColorGradient::getGlobalBounds(){
 
 
 
-sf::Color& ColorGradient::getColor(sf::Vector2i pos){
+sf::Color ColorGradient::getColor(sf::Vector2i pos){
     int height = gradients.getBounds().height;
     int width = gradients.getBounds().width;
     for(int i = 0; i < height; i++){

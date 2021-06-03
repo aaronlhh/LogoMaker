@@ -25,7 +25,7 @@ public:
     void setSize(float x, float y);
     void setPosition(float x, float y);
     void setFillColor(sf::Color color);
-    void setFont(sf::Font font);
+    void setFont(sf::Font& font);
     
     // globalBound
     sf::FloatRect getGlobalBounds();

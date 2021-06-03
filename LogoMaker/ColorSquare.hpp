@@ -15,7 +15,7 @@ public:
     ColorSquare();
     
     // accessors
-    sf::Color& getColor();
+    sf::Color getColor();
     
     // setter
     void setColor(sf::Color color);

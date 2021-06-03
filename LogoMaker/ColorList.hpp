@@ -23,7 +23,7 @@ public:
     sf::FloatRect getGlobalBounds();
     
     // return the corresponding color based on the vector index
-    sf::Color& getColorByIndex(int index);
+    sf::Color getColorByIndex(int index);
     
     // override
     void draw(sf::RenderTarget& window, sf::RenderStates states) const;

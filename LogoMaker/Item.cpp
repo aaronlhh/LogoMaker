@@ -58,7 +58,7 @@ void Item::setFillColor(sf::Color color){
     box.setFillColor(color);
 }
 
-void Item::setFont(sf::Font font){
+void Item::setFont(sf::Font& font){
     text.setFont(font);
 }
 
