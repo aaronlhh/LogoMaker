@@ -21,7 +21,7 @@ public:
     sf::FloatRect getGlobalBounds();
     
     // getColor from the corresponding position/point
-    sf::Color getColor(sf::Vector2i pos);
+    sf::Color& getColor(sf::Vector2i pos);
     
     // setup color of the gradient
     void setColor(sf::Color color);
@@ -32,6 +32,7 @@ public:
 private:
     sf::VertexArray gradients;  // array of points with diff. colors
     sf::RectangleShape background;
+    sf::Color none;
 };
 
 #endif /* ColorGradient_hpp */

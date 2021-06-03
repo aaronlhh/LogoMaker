@@ -21,7 +21,7 @@ ColorSquare::ColorSquare()
 }
 
 
-sf::Color ColorSquare::getColor(){
+sf::Color& ColorSquare::getColor(){
     return getFillColor();
 }
 

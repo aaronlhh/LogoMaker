@@ -38,7 +38,7 @@ void ColorPicker::setPosition(float x, float y){
     list.setPosition(x, y + square.getGlobalBounds().height);
 }
 
-sf::Color ColorPicker::getColor(){
+sf::Color& ColorPicker::getColor(){
     return square.getColor();
 }
 

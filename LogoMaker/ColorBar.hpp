@@ -22,8 +22,8 @@ public:
     sf::FloatRect getGlobalBounds();
     
     // accessors
-    sf::Color getTextColor();
-    sf::Color getBackGroundColor();
+    sf::Color& getTextColor();
+    sf::Color& getBackGroundColor();
     
     // override
     void draw(sf::RenderTarget& window, sf::RenderStates states) const;

@@ -69,7 +69,7 @@ sf::FloatRect ColorList::getGlobalBounds(){
     return listBox.getGlobalBounds();
 }
 
-sf::Color ColorList::getColorByIndex(int index){
+sf::Color& ColorList::getColorByIndex(int index){
     return list.at(index).getColor();
 }
 
