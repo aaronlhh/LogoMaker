@@ -108,6 +108,13 @@ void BottomMenu::setPosition(float x, float y){
 int BottomMenu::getSliderValue(States::sliderType key){
     int index = sliderIndex[key];
     Slider& slider = sliders.at(index);
+    if(key == States::TEXT_X_AXIS || key == States::SHADOW_X_AXIS){
+        double correspondVal = (double)slider.getCurVal()/1000*States::WINDOW_WIDTH;
+        return correspondVal;
+    }else if(key == States::TEXT_Y_AXIS || key == States::SHADOW_Y_AXIS){
+        double correspondVal = (double)slider.getCurVal()/1000*States::WINDOW_HEIGHT;
+        return correspondVal;
+    }
     return slider.getCurVal();
 }
 
