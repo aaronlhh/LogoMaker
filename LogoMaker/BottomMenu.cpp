@@ -23,11 +23,11 @@ BottomMenu::BottomMenu(){
     sliderIndex[States::TEXT_OPACITY] = index++;
     sliders.push_back(textOpa);
     
-    Slider fontSize = Slider("Font Size", 100, 35);
+    Slider fontSize = Slider("Font Size", 150, 70);
     sliderIndex[States::FONT_SIZE] = index++;
     sliders.push_back(fontSize);
     
-    Slider skew = Slider("Skew", 100, 15);
+    Slider skew = Slider("Skew", 100, 55);
     sliderIndex[States::SKEW] = index++;
     sliders.push_back(skew);
 
@@ -36,10 +36,10 @@ BottomMenu::BottomMenu(){
     sliders.push_back(shadowOpa);
 
     Slider backgroundOpa = Slider("Background Opacity", 255, 255);
-    sliderIndex[States::SKEW] = index++;
+    sliderIndex[States::BACKGROUND_OPACITY] = index++;
     sliders.push_back(backgroundOpa);
 
-    Slider xAxis = Slider("Text X-Axis", 1000, 239);
+    Slider xAxis = Slider("Text X-Axis", 1000, 500);
     sliderIndex[States::TEXT_X_AXIS] = index++;
     sliders.push_back(xAxis);
 
@@ -51,7 +51,7 @@ BottomMenu::BottomMenu(){
     sliderIndex[States::SHADOW_X_AXIS] = index++;
     sliders.push_back(shadowXAxis);
 
-    Slider ShadowYAxis = Slider("Shadow Y-Axis", 1000, 172);
+    Slider ShadowYAxis = Slider("Shadow Y-Axis", 1000, 250);
     sliderIndex[States::SHADOW_Y_AXIS] = index++;
     sliders.push_back(ShadowYAxis);
 
