@@ -62,19 +62,95 @@ void ColorGradient::setColor(sf::Color color){
     int height = 256;
     int width = 256;
     int r = color.r, g = color.g, b = color.b;
+    
+    // find hsv
+    int M,m;
+    if(r == 255 && g == 255 && b == 255){
+        M = 255;
+        m = 255;
+    }else if(r == 0 && g == 0 && b == 0){
+        M = 0;
+        m = 0;
+    }else{
+        M = 255;
+        m = 0;
+    }
+    int c = M-m;
+    double H;
+    if(c == 0){
+        H = 0;
+    }else if(M == r){
+        H = 60*((g-b)/c % 6);
+    }else if(M == g){
+        H = 60*((double)(b-r)/c + 2);
+    }else{
+        // M == b
+        H = 60*((double)(r-g)/c + 4);
+    }
+    
     for(int i = 0; i < height; i++){
         for(int j = 0; j < width; j++){
             sf::Vertex& vertex = gradients[i*width + j];
-
+            
+            // find new hsv and convert back to rgb
+            double V;
+            double S;
+            S = (i == 0)? 0:((double)j/255);
+            V = (double)i/255;
+            
+    
+            // change to rgb
+            int h = H/60;
+            double f = ((double)H/60 - h);
+            double p = V*(1-S);
+            double q = V*(1-S*f);
+            double t = V*(1-S*(1-f));
+            
+            int newR, newG, newB;
+            if(h == 0 || h == 6){
+                newR = V*255;
+                newG = t*255;
+                newB = p*255;
+            }else if(h == 1){
+                newR = q*255;
+                newG = V*255;
+                newB = p*255;
+            }else if(h == 2){
+                newR = p*255;
+                newG = V*255;
+                newB = t*255;
+            }else if(h == 3){
+                newR = p*255;
+                newG = q*255;
+                newB = V*255;
+            }else if(h == 4){
+                newR = t*255;
+                newG = p*255;
+                newB = V*255;
+            }else{
+                // h == 5
+                newR = V*255;
+                newG = p*255;
+                newB = q*255;
+            }
+            if(c == 0){
+                newR = 255-j;
+                newG = 255-j;
+                newB = 255-j;
+            }
+            
+            vertex.color = sf::Color(newR, newG, newB);
+            
+            
             // set color
             // r,g,b are either 0 or 255
             // from up to down, a increases from 0 to 255
             // from left to right, from white to real color
-            int newR = (r == 255)? 255:(255-j);
-            int newG = (g == 255)? 255:(255-j);
-            int newB = (b == 255)? 255:(255-j);
-            int newA = i;
-            vertex.color = sf::Color(newR, newG, newB, newA);
+//            int newR = (r == 255)? 255:(255-j);
+//            int newG = (g == 255)? 255:(255-j);
+//            int newB = (b == 255)? 255:(255-j);
+//            int newA = i;
+//            vertex.color = sf::Color(newR, newG, newB, newA);
             vertex.position = sf::Vector2f(j,i);
         }
     }

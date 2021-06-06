@@ -7,9 +7,6 @@
 
 #include "BottomMenu.hpp"
 
-
-
-
 BottomMenu::BottomMenu(){
     // adding sliders
     int index = 0;
