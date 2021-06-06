@@ -8,6 +8,7 @@
 #ifndef LogoMaker_hpp
 #define LogoMaker_hpp
 #include "BottomMenu.hpp"
+#include "MenuBar.hpp"
 
 class LogoMaker: public sf::Drawable, public sf::Transformable{
 public:
@@ -28,9 +29,11 @@ public:
     
 private:
     BottomMenu menu;
+//    MenuBar bar;
     sf::Text text;
     sf::Text shadow;
     sf::RectangleShape background;
+    
 };
 
 #endif /* LogoMaker_hpp */

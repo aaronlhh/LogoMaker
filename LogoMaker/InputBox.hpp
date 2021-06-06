@@ -25,6 +25,7 @@ public:
     void setSize(float x, float y);
     void setPosition(float x, float y);
     sf::FloatRect getGlobalBounds();
+    void setFillColor(sf::Color color);
     
     // accessors
     string getText();

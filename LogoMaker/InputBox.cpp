@@ -72,7 +72,9 @@ void InputBox::setPosition(float x, float y){
                      y + box.getGlobalBounds().height/2 - text.getGlobalBounds().height/1.5);
 }
 
-
+void InputBox::setFillColor(sf::Color color){
+    box.setFillColor(color);
+}
 
 void InputBox::draw(sf::RenderTarget& window, sf::RenderStates states) const{
     window.draw(box);

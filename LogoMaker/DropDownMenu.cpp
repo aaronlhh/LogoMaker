@@ -42,10 +42,11 @@ void DropDownMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const
 void DropDownMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
     
     if(MouseEvents<InputBox>::mouseClicked(box, window)){
-        if(appear)
+        if(appear){
             appear = false;
-        else
+        }else{
             appear = true;
+        }
     }else if(MouseEvents<ItemList>::mouseClicked(window, event) &&
              !MouseEvents<ItemList>::hovered(menu, window)){
         appear = false;
@@ -63,6 +64,12 @@ void DropDownMenu::update(){
         appear = false;
         box.setText(menu.getClicked());
         setPosition(x, y);
+    }
+    
+    if(appear){
+        box.setFillColor(sf::Color::Blue);
+    }else{
+        box.setFillColor(sf::Color::Transparent);
     }
 }
 
@@ -109,6 +116,6 @@ sf::FloatRect DropDownMenu::getGlobalBounds(){
     rec.top = vec.y;
     rec.left = vec.x;
     rec.width = box.getGlobalBounds().width;
-    rec.height = box.getGlobalBounds().height + 5 + menu.getGlobalBounds().height;
+    rec.height = box.getGlobalBounds().height;
     return rec;
 }
