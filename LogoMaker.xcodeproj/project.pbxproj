@@ -35,6 +35,7 @@
 		93516F9A2665886F00DE7F32 /* Typing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F982665886F00DE7F32 /* Typing.cpp */; };
 		93516F9D2665908100DE7F32 /* TextInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93516F9B2665908100DE7F32 /* TextInput.cpp */; };
 		9369EB36266C8C3400D6D00C /* MenuBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9369EB34266C8C3400D6D00C /* MenuBar.cpp */; };
+		9369EB39266C97DA00D6D00C /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9369EB37266C97DA00D6D00C /* Menu.cpp */; };
 		936ADFA3266032CB00A0AF0F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFA2266032CB00A0AF0F /* main.cpp */; };
 		936ADFAF2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAA2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib */; };
 		936ADFB02660363900A0AF0F /* libsfml-audio.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 936ADFAB2660363900A0AF0F /* libsfml-audio.2.5.1.dylib */; };
@@ -132,6 +133,8 @@
 		93516F9C2665908100DE7F32 /* TextInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextInput.hpp; sourceTree = "<group>"; };
 		9369EB34266C8C3400D6D00C /* MenuBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenuBar.cpp; sourceTree = "<group>"; };
 		9369EB35266C8C3400D6D00C /* MenuBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuBar.hpp; sourceTree = "<group>"; };
+		9369EB37266C97DA00D6D00C /* Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		9369EB38266C97DA00D6D00C /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
 		936ADF9F266032CB00A0AF0F /* LogoMaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogoMaker; sourceTree = BUILT_PRODUCTS_DIR; };
 		936ADFA2266032CB00A0AF0F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		936ADFAA2660363900A0AF0F /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "ExternalLibrary/SFML/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				931AF32C26681F3A00CBFF6D /* FontSetting.hpp */,
 				9369EB34266C8C3400D6D00C /* MenuBar.cpp */,
 				9369EB35266C8C3400D6D00C /* MenuBar.hpp */,
+				9369EB37266C97DA00D6D00C /* Menu.cpp */,
+				9369EB38266C97DA00D6D00C /* Menu.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */,
 				931AF327266818E800CBFF6D /* ItemList.cpp in Sources */,
 				93516F97266586F900DE7F32 /* Cursor.cpp in Sources */,
+				9369EB39266C97DA00D6D00C /* Menu.cpp in Sources */,
 				935050A626670C60002CCAA2 /* ColorGradient.cpp in Sources */,
 				931AF32A26681D1200CBFF6D /* DropDownMenu.cpp in Sources */,
 				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,

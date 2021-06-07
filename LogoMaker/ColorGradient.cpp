@@ -43,6 +43,7 @@ sf::FloatRect ColorGradient::getGlobalBounds(){
 
 
 
+// pos == mousePos
 sf::Color ColorGradient::getColor(sf::Vector2i pos){
     int height = gradients.getBounds().height;
     int width = gradients.getBounds().width;
@@ -97,15 +98,15 @@ void ColorGradient::setColor(sf::Color color){
             double S;
             S = (i == 0)? 0:((double)j/255);
             V = (double)i/255;
-            
-    
+
+
             // change to rgb
             int h = H/60;
             double f = ((double)H/60 - h);
             double p = V*(1-S);
             double q = V*(1-S*f);
             double t = V*(1-S*(1-f));
-            
+
             int newR, newG, newB;
             if(h == 0 || h == 6){
                 newR = V*255;
@@ -138,10 +139,10 @@ void ColorGradient::setColor(sf::Color color){
                 newG = 255-j;
                 newB = 255-j;
             }
-            
+
             vertex.color = sf::Color(newR, newG, newB);
-            
-            
+
+
             // set color
             // r,g,b are either 0 or 255
             // from up to down, a increases from 0 to 255
