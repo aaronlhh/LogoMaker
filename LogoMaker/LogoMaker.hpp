@@ -28,8 +28,8 @@ public:
     
     
 private:
+    MenuBar bar;
     BottomMenu menu;
-//    MenuBar bar;
     sf::Text text;
     sf::Text shadow;
     sf::RectangleShape background;

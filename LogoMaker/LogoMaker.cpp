@@ -20,16 +20,16 @@ LogoMaker::LogoMaker(){
 
 
 void LogoMaker::setPosition(float x, float y){
-//    bar.setPosition(0, y);
-    background.setPosition(0, y);
+    bar.setPosition(0, y);
+    background.setPosition(0, bar.getPosition().y + bar.getGlobalBounds().height);
     menu.setPosition(x, background.getPosition().y + background.getGlobalBounds().height);
 }
 
 
 
 void LogoMaker::draw(sf::RenderTarget& window, sf::RenderStates states) const{
-//    window.draw(bar);
     window.draw(background);
+    window.draw(bar);
     window.draw(menu);
     window.draw(text);
     window.draw(shadow);
@@ -38,13 +38,13 @@ void LogoMaker::draw(sf::RenderTarget& window, sf::RenderStates states) const{
 
 void LogoMaker::addEventHandler(sf::RenderWindow& window, sf::Event event){
     menu.addEventHandler(window, event);
-//    bar.addEventHandler(window, event);
+    bar.addEventHandler(window, event);
 }
 
 
 void LogoMaker::update(){
     menu.update();
-//    bar.update();
+    bar.update();
 
     
     // setup background
