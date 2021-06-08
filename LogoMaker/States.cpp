@@ -15,6 +15,10 @@ int States::TEXT_SIZE = 35;
 int States::WINDOW_WIDTH = 1500;
 int States::WINDOW_HEIGHT = 1400;
 
+std::map<States::Image, bool> States::loadImage;
+sf::Texture States::fileTexture;
+sf::Texture States::DirTexture;
+
 bool States::isStateEnabled(ObjectState state){
     return states[state];
 }

@@ -31,6 +31,11 @@ public:
     // colors
     enum colors {RED, YELLOW, GREEN, LIGHTBLUE, BLUE, PURPLE, BLACK, WHITE};
     
+    // fileTree images
+    enum Image { FILE_ICON, DIRECTORY_ICON };
+    static std::map<Image, bool> loadImage;
+    static sf::Texture fileTexture;
+    static sf::Texture DirTexture;
 
     // global accessors and mutators
     void operator=(const States& other);
