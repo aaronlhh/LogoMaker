@@ -107,6 +107,8 @@ void MenuBar::update(){
             string word = i->getClicked();
             if(word == "Open Project"){
                 cout << "Open proj\n";
+//                window.setPosition(100, 100);
+                window.run();
             }else if(word == "Close Project"){
                 cout << "Close Project\n";
             }else if(word == "New Project"){

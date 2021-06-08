@@ -8,6 +8,7 @@
 #ifndef MenuBar_hpp
 #define MenuBar_hpp
 #include "Menu.hpp"
+#include "WindowDialog.hpp"
 
 class MenuBar: public sf::Drawable, public sf::Transformable{
 public:
@@ -22,6 +23,7 @@ public:
     void update();
 
 private:
+    WindowDialog window;
     vector<Menu> bar;
     int index;
     bool isOpen;

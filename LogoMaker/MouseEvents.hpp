@@ -47,10 +47,20 @@ private:
 template <class T>
 int MouseEvents<T>::clicks;
 
+template <class T>
+sf::Clock MouseEvents<T>::clock;
+
 
 template <class T>
 bool MouseEvents<T>::mouseClicked(T& object, sf::RenderWindow& window){
     if( hovered(object, window) && sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) ){
+        if(clock.getElapsedTime().asMilliseconds() <= 500){
+            clicks++;
+            clock.restart();
+        }else{
+            clicks = 1;
+            clock.restart();
+        }
         return true;
     }else{
         return false;
@@ -70,6 +80,8 @@ template <class T>
 bool MouseEvents<T>::mouseDoubleClicked(){
     if(clicks == 2){
         return true;
+    }else{
+        return false;
     }
 }
 

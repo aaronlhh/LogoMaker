@@ -24,6 +24,10 @@
 		931AF327266818E800CBFF6D /* ItemList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 931AF325266818E800CBFF6D /* ItemList.cpp */; };
 		931AF32A26681D1200CBFF6D /* DropDownMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 931AF32826681D1200CBFF6D /* DropDownMenu.cpp */; };
 		931AF32D26681F3A00CBFF6D /* FontSetting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 931AF32B26681F3A00CBFF6D /* FontSetting.cpp */; };
+		93369750266EC5DB00E7B03E /* WindowDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9336974E266EC5DB00E7B03E /* WindowDialog.cpp */; };
+		93385FB82670183100F5396F /* FileItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FB62670183100F5396F /* FileItem.cpp */; };
+		93385FBB26701AF100F5396F /* folder.png in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FB926701AF100F5396F /* folder.png */; };
+		93385FBC26701AF100F5396F /* file.png in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FBA26701AF100F5396F /* file.png */; };
 		935050A02666F4B4002CCAA2 /* ColorSquare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */; };
 		935050A32666FA17002CCAA2 /* ColorList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935050A12666FA17002CCAA2 /* ColorList.cpp */; };
 		935050A626670C60002CCAA2 /* ColorGradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935050A426670C60002CCAA2 /* ColorGradient.cpp */; };
@@ -63,6 +67,8 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				93385FBB26701AF100F5396F /* folder.png in Copy Files */,
+				93385FBC26701AF100F5396F /* file.png in Copy Files */,
 				931AF31C2667FE1100CBFF6D /* Verdana.ttf in Copy Files */,
 				931AF31D2667FE1100CBFF6D /* Verdana Italic.ttf in Copy Files */,
 				931AF31E2667FE1100CBFF6D /* Verdana Bold.ttf in Copy Files */,
@@ -112,6 +118,12 @@
 		931AF32926681D1200CBFF6D /* DropDownMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DropDownMenu.hpp; sourceTree = "<group>"; };
 		931AF32B26681F3A00CBFF6D /* FontSetting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FontSetting.cpp; sourceTree = "<group>"; };
 		931AF32C26681F3A00CBFF6D /* FontSetting.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FontSetting.hpp; sourceTree = "<group>"; };
+		9336974E266EC5DB00E7B03E /* WindowDialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowDialog.cpp; sourceTree = "<group>"; };
+		9336974F266EC5DB00E7B03E /* WindowDialog.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowDialog.hpp; sourceTree = "<group>"; };
+		93385FB62670183100F5396F /* FileItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileItem.cpp; sourceTree = "<group>"; };
+		93385FB72670183100F5396F /* FileItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileItem.hpp; sourceTree = "<group>"; };
+		93385FB926701AF100F5396F /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		93385FBA26701AF100F5396F /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
 		9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSquare.cpp; sourceTree = "<group>"; };
 		9350509F2666F4B4002CCAA2 /* ColorSquare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ColorSquare.hpp; sourceTree = "<group>"; };
 		935050A12666FA17002CCAA2 /* ColorList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorList.cpp; sourceTree = "<group>"; };
@@ -194,6 +206,8 @@
 		936ADFA1266032CB00A0AF0F /* LogoMaker */ = {
 			isa = PBXGroup;
 			children = (
+				93385FBA26701AF100F5396F /* file.png */,
+				93385FB926701AF100F5396F /* folder.png */,
 				931AF31B2667FE1100CBFF6D /* Verdana Bold.ttf */,
 				931AF31A2667FE1100CBFF6D /* Verdana Italic.ttf */,
 				931AF3192667FE1100CBFF6D /* Verdana.ttf */,
@@ -206,15 +220,15 @@
 				931AF30D2667FD7A00CBFF6D /* Times New Roman Bold.ttf */,
 				931AF3102667FD7A00CBFF6D /* Times New Roman Italic.ttf */,
 				931AF30C2667FD7A00CBFF6D /* Times New Roman.ttf */,
+				936ADFC02660399300A0AF0F /* States.hpp */,
+				936ADFB92660396C00A0AF0F /* States.cpp */,
+				936ADFC32660399300A0AF0F /* MouseEvents.hpp */,
 				936ADFC42660399300A0AF0F /* EventHandler.hpp */,
 				936ADFBF2660399300A0AF0F /* GUIComponent.hpp */,
 				936ADFC22660399300A0AF0F /* History.hpp */,
 				936ADFB72660396C00A0AF0F /* History.cpp */,
-				936ADFC32660399300A0AF0F /* MouseEvents.hpp */,
 				936ADFBD2660399300A0AF0F /* Snapshot.hpp */,
 				936ADFBE2660399300A0AF0F /* SnapshotInterface.hpp */,
-				936ADFC02660399300A0AF0F /* States.hpp */,
-				936ADFB92660396C00A0AF0F /* States.cpp */,
 				936ADFB82660396C00A0AF0F /* Snapshot.cpp */,
 				936ADFA2266032CB00A0AF0F /* main.cpp */,
 				936ADFB42660381600A0AF0F /* Slider.cpp */,
@@ -255,6 +269,10 @@
 				9369EB35266C8C3400D6D00C /* MenuBar.hpp */,
 				9369EB37266C97DA00D6D00C /* Menu.cpp */,
 				9369EB38266C97DA00D6D00C /* Menu.hpp */,
+				9336974E266EC5DB00E7B03E /* WindowDialog.cpp */,
+				9336974F266EC5DB00E7B03E /* WindowDialog.hpp */,
+				93385FB62670183100F5396F /* FileItem.cpp */,
+				93385FB72670183100F5396F /* FileItem.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -327,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93385FB82670183100F5396F /* FileItem.cpp in Sources */,
 				9369EB36266C8C3400D6D00C /* MenuBar.cpp in Sources */,
 				93516F9A2665886F00DE7F32 /* Typing.cpp in Sources */,
 				931AF3082667F0BF00CBFF6D /* ColorBar.cpp in Sources */,
@@ -344,6 +363,7 @@
 				931AF327266818E800CBFF6D /* ItemList.cpp in Sources */,
 				93516F97266586F900DE7F32 /* Cursor.cpp in Sources */,
 				9369EB39266C97DA00D6D00C /* Menu.cpp in Sources */,
+				93369750266EC5DB00E7B03E /* WindowDialog.cpp in Sources */,
 				935050A626670C60002CCAA2 /* ColorGradient.cpp in Sources */,
 				931AF32A26681D1200CBFF6D /* DropDownMenu.cpp in Sources */,
 				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,
