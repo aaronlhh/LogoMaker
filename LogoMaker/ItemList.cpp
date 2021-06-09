@@ -89,6 +89,7 @@ void ItemList::addEventHandler(sf::RenderWindow& window, sf::Event event){
             word = itemlist.at(i).getText();
         }
     }
+    setPosition(getPosition().x, getPosition().y);
 }
 
 void ItemList::draw(sf::RenderTarget& window, sf::RenderStates states) const{

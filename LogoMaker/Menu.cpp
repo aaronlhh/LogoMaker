@@ -40,6 +40,7 @@ sf::FloatRect Menu::getGlobalBounds(){
 
 void Menu::setString(string title){
     this->title.setText(title);
+    setPosition(this->title.getGlobalBounds().left, this->title.getGlobalBounds().top);
 }
 
 
@@ -80,6 +81,7 @@ void Menu::addEventHandler(sf::RenderWindow& window, sf::Event event){
     if(appear){
         list.addEventHandler(window, event);
     }
+    setPosition(title.getGlobalBounds().left, title.getGlobalBounds().top);
 }
 
 
@@ -89,9 +91,10 @@ void Menu::update(){
         clicked = true;
         list.toggleClick();
         word = list.getClicked();
-        setPosition(title.getPosition().x, title.getPosition().y);
+        setPosition(title.getGlobalBounds().left, title.getGlobalBounds().top);
         title.setFillColor(sf::Color::Transparent);
     }
+    setPosition(title.getGlobalBounds().left, title.getGlobalBounds().top);
 }
 
 bool Menu::isClicked(){

@@ -79,6 +79,7 @@ bool MouseEvents<T>::mouseClicked( sf::RenderWindow& window, sf::Event event){
 template <class T>
 bool MouseEvents<T>::mouseDoubleClicked(){
     if(clicks == 2){
+        clicks = 0;
         return true;
     }else{
         return false;
