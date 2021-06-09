@@ -31,7 +31,7 @@ BottomMenu::BottomMenu(){
     sliderIndex[States::SKEW] = index++;
     sliders.push_back(skew);
 
-    Slider shadowOpa = Slider("Shadow Opacity", 255, 127);
+    Slider shadowOpa = Slider("Shadow Opacity", 255, 255);
     sliderIndex[States::SHADOW_OPACITY] = index++;
     sliders.push_back(shadowOpa);
 
@@ -131,6 +131,51 @@ sf::Font& BottomMenu::getFont(){
     return States::getFont(fontList.getFont(), fontList.getStyle());
 }
 
+void BottomMenu::setSliderValue(States::sliderType key, int value){
+    sliderIndex[key] = value;
+}
+
+
+void BottomMenu::setLogoText(string logo){
+    inputBox.setLabel(logo);
+}
+
+
+void BottomMenu::setTextColor(sf::Color color){
+    bar.setTextColor(color);
+}
+
+
+void BottomMenu::setBackGroundColor(sf::Color color){
+    bar.setBackGroundColor(color);
+}
+
+
+void BottomMenu::setFont(States::fonts font, States::fontStyle style){
+    fontList.setFont(font, style);
+}
+
+void BottomMenu::reset(){
+    sliders[0].setCurrent(0);
+    sliders[1].setCurrent(0);
+    sliders[2].setCurrent(255);
+    sliders[3].setCurrent(70);
+    sliders[4].setCurrent(55);
+    sliders[5].setCurrent(255);
+    sliders[6].setCurrent(255);
+    sliders[7].setCurrent(500);
+    sliders[8].setCurrent(164);
+    sliders[9].setCurrent(509);
+    sliders[10].setCurrent(250);
+    inputBox.setText("");
+    bar.setTextColor(sf::Color::Red);
+    bar.setBackGroundColor(sf::Color::Black);
+    fontList.setFont(States::ARIAL, States::REGULAR);
+}
+
+
+
+
 void BottomMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
     for(int i = 0; i < sliders.size(); i ++){
         window.draw(sliders.at(i));
@@ -142,6 +187,8 @@ void BottomMenu::draw(sf::RenderTarget& window, sf::RenderStates states) const{
 
 
 
+
+
 void BottomMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
     inputBox.addEventHandler(window, event);
     bar.addEventHandler(window, event);
@@ -150,6 +197,64 @@ void BottomMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
         sliders.at(i).addEventHandler(window, event);
     }
     
+    
+    if(States::isStatusSet(States::SAVE_PROJ)){
+        ofstream file;
+        string filename = filePrompt.run();
+        if(filename != "NULL"){
+            filename = "projs/" + filename + ".txt";
+            file.open(filename);
+            file << getLogoText() + "\n";
+            for(int i = 0; i < sliders.size(); i++){
+                file << to_string(sliders.at(i).getCurVal()) << " ";
+            }
+            sf::Color logoColor = getTextColor();
+            sf::Color backColor = getBackGroundColor();
+            file << to_string(logoColor.r) << " ";
+            file << to_string(logoColor.g) << " ";
+            file << to_string(logoColor.b) << " ";
+            file << to_string(backColor.r) << " ";
+            file << to_string(backColor.g) << " ";
+            file << to_string(backColor.b) << " ";
+            
+            // font
+            file << to_string(static_cast<int>(fontList.getFont())) << " ";
+            file << to_string(static_cast<int>(fontList.getStyle()));
+            file.close();
+        }
+        States::setStatus(States::SAVE_PROJ, false);
+    }
+    
+    if(States::isStatusSet(States::OPEN_PROJ)){
+        ifstream file;
+        string filename = States::fileToOpen;
+        filename = "projs/" + filename;
+        file.open(filename);
+        if(file.is_open()){
+            string name;
+            getline(file, name);
+            inputBox.setText(name);
+            int temp;
+            for(int i = 0; i < sliders.size(); i++){
+                file >> temp;
+                sliders.at(i).setCurrent(temp);
+            }
+            int r,g,b;
+            file >> r >> g >> b;
+            bar.setTextColor(sf::Color(r,g,b));
+            file >> r >> g >> b;
+            bar.setBackGroundColor(sf::Color(r,g,b));
+            
+            // font
+            int font, style;
+            file >> font;
+            file >> style;
+            fontList.setFont(static_cast<States::fonts>(font), static_cast<States::fontStyle>(style));
+            file.close();
+        }
+        
+        States::setStatus(States::OPEN_PROJ, false);
+    }
 }
 
 

@@ -74,9 +74,8 @@ void FileItem::addEventHandler(sf::RenderWindow& window, sf::Event event){
     }
     
     if(MouseEvents<sf::RectangleShape>::mouseDoubleClicked()){
-        doubleClicked = true;
-    }else{
-        doubleClicked = false;
+        States::setStatus(States::OPEN_PROJ, true);
+        States::fileToOpen = getName();
     }
 }
 
@@ -103,11 +102,11 @@ void FileItem::setPosition(sf::Vector2f pos){
     
     this->box.setPosition(pos);
     
-    if(text.getString().find("File") != std::string::npos){
-        this->icon.setPosition(box.getPosition().x + box.getGlobalBounds().width/3 - length/2 + 5,
+    if(text.getString().find("txt") != std::string::npos){
+        this->icon.setPosition(box.getPosition().x + box.getGlobalBounds().width/2 - length/2 + 5,
                                box.getPosition().y + box.getGlobalBounds().height/2 - this->icon.getGlobalBounds().height/2);
         
-        this->text.setPosition(box.getPosition().x + box.getGlobalBounds().width/3 - length/2 + this->icon.getGlobalBounds().width + padding + 5,
+        this->text.setPosition(box.getPosition().x + box.getGlobalBounds().width/2 - length/2 + this->icon.getGlobalBounds().width + padding + 5,
                                box.getPosition().y + box.getGlobalBounds().height/2 - this->text.getGlobalBounds().height/1.5);
         
     }else{
@@ -143,3 +142,18 @@ sf::Color FileItem::getFillColor() const{
 void FileItem::setName(string name){
     text.setString(name);
 }
+
+
+States::Image FileItem::getIcon(){
+    if(text.getString().find("txt") != std::string::npos){
+        return States::FILE_ICON;
+    }else{
+        return States::DIRECTORY_ICON;
+    }
+}
+
+string FileItem::getName(){
+    return text.getString();
+}
+
+

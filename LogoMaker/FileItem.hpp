@@ -15,7 +15,7 @@ class FileItem: public sf::Transformable, public sf::Drawable{
 public:
     //Constructors
     FileItem();
-    FileItem(States::Image icon, std::string text, sf::Vector2f size, sf::Vector2f position);
+    FileItem(States::Image icon, std::string text, sf::Vector2f size = {500,100}, sf::Vector2f position = {0,0});
     
     //GUIComponent pure virtual functions, refer to the TextInput Project for Info
     void draw(sf::RenderTarget& window, sf::RenderStates states) const;
@@ -36,6 +36,9 @@ public:
     sf::Color getFillColor() const;
     // set name of fileNode
     void setName(string name);
+    // accessors
+    States::Image getIcon();
+    string getName();
     
     
 private:
@@ -43,8 +46,7 @@ private:
     sf::Sprite icon;
     sf::Text text;
     sf::RectangleShape box;
-    float padding = 10;
-    bool doubleClicked;
+    float padding = 20;
 };
 
 #endif /* FileItem_hpp */

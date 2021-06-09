@@ -11,6 +11,8 @@
 #include "TextInput.hpp"
 #include "ColorBar.hpp"
 #include "FontSetting.hpp"
+#include "NewFile.hpp"
+#include <fstream>
 
 class BottomMenu: public sf::Drawable, public sf::Transformable{
 public:
@@ -25,6 +27,14 @@ public:
     sf::Color getBackGroundColor();
     sf::Font& getFont();
     
+    // mutators
+    void setSliderValue(States::sliderType key, int value);
+    void setLogoText(string logo);
+    void setTextColor(sf::Color color);
+    void setBackGroundColor(sf::Color color);
+    void setFont(States::fonts font, States::fontStyle style);
+    void reset();       // set values to default
+    
     // GUI
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void addEventHandler(sf::RenderWindow& window, sf::Event event);
@@ -37,7 +47,7 @@ private:
     TextInput inputBox;
     ColorBar bar;
     FontSetting fontList;
-    
+    NewFile filePrompt;
 };
 
 #endif /* BottomMenu_hpp */

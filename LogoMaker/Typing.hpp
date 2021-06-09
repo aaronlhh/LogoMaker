@@ -26,6 +26,7 @@ public:
     void setPosition(float x, float y);
     void toggleHidden();
     void setSize(float size);   // character size
+    void setText(string text);
     
     // accessor
     string getString();

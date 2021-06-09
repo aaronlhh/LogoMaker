@@ -27,6 +27,8 @@ public:
     void setLabelSize(int size);
     void setPosition(float x, float y);
     void setLength(float len);
+    void setSize(float x, float y);
+    void setText(string text);
     
     //from the sf::Drawable class
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;

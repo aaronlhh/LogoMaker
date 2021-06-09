@@ -16,6 +16,8 @@ public:
     
     // setup pos
     void setPosition(float x, float y);
+    void setFont(States::fonts font, States::fontStyle style);
+    
     
     // accessors
     States::fonts getFont();

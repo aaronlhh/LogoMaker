@@ -33,6 +33,8 @@ private:
     sf::Text text;
     sf::Text shadow;
     sf::RectangleShape background;
+    NewFile filePrompt;
+    bool closed = false;
     
 };
 

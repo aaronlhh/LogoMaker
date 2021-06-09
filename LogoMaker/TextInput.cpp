@@ -61,8 +61,17 @@ void TextInput::setPosition(float x, float y){
 }
 
 void TextInput::setLength(float len){
-    textBox.setSize({textBox.getSize().x, len});
+    textBox.setSize({len, textBox.getSize().y});
     setPosition(label.getPosition().x, label.getPosition().y);
+}
+
+void TextInput::setSize(float x, float y){
+    textBox.setSize({x, y});
+    setPosition(label.getPosition().x, label.getPosition().y);
+}
+
+void TextInput::setText(string text){
+    typing.setText(text);
 }
 
 

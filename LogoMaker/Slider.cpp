@@ -82,6 +82,12 @@ void Slider::setLabel(string label){
     setupPosition();
 }
 
+void Slider::setCurrent(int num){
+    this->relPos = num;
+    curVal.setString(to_string(relPos));
+    setupPosition();
+}
+
 int Slider::getCurVal(){
     return relPos;
 }

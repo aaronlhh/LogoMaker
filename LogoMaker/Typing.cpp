@@ -46,6 +46,11 @@ void Typing::setSize(float size){
     setPosition(text.getPosition().x, text.getPosition().y);
 }
 
+
+void Typing::setText(string text){
+    this->text.setString(text);
+}
+
 void Typing::toggleHidden(){
     if(hidden)
         hidden = false;

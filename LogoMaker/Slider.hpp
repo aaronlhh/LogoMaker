@@ -20,6 +20,7 @@ public:
     void setPosition(float x, float y);         // set position of slider
     void setMax(float max);                 // set max number of slider
     void setLabel(string label);            // set label of slider
+    void setCurrent(int num);               // set currentVal
     
     // accessors
     int getCurVal();

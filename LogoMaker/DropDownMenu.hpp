@@ -12,6 +12,7 @@
 #include "InputBox.hpp"
 #include "GUIComponent.hpp"
 
+
 class DropDownMenu: public sf::Drawable, public sf::Transformable{
 public:
     
@@ -22,6 +23,7 @@ public:
     // setter
     void resize(float x, float y);
     void setPosition(float x, float y);
+    void setText(string text);
     
     void add(string item);
     void reset(vector<string> vec);
@@ -43,6 +45,7 @@ private:
     ItemList menu;
     float x, y;  // record the position
     bool appear;
+    
 };
 
 #endif /* DropdownMenu_hpp */

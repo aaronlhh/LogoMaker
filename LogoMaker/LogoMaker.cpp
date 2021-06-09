@@ -28,15 +28,47 @@ void LogoMaker::setPosition(float x, float y){
 
 
 void LogoMaker::draw(sf::RenderTarget& window, sf::RenderStates states) const{
-    window.draw(background);
+    if(!closed){
+        window.draw(background);
+        window.draw(menu);
+        window.draw(text);
+        window.draw(shadow);
+    }
     window.draw(bar);
-    window.draw(menu);
-    window.draw(text);
-    window.draw(shadow);
 }
 
 
 void LogoMaker::addEventHandler(sf::RenderWindow& window, sf::Event event){
+    if(States::isStatusSet(States::QUIT)){
+        window.close();
+    }else if(States::isStatusSet(States::CLOSE_PROJ)){
+        closed = true;
+        States::setStatus(States::CLOSE_PROJ, false);
+    }else if(States::isStatusSet(States::OPEN_PROJ)){
+        closed = false;
+    }else if(States::isStatusSet(States::NEW_PROJ)){
+        menu.reset();
+        States::setStatus(States::NEW_PROJ, false);
+    }else if(States::isStatusSet(States::EXPORT_IMG)){
+        string filename = filePrompt.run();
+        if(filename != "NULL"){
+            filename = "images/" + filename + ".png";
+            sf::Texture texture;
+            sf::Image imageTemp, image;
+            texture.create(window.getSize().x, window.getSize().y);
+            texture.update(window);
+            imageTemp = texture.copyToImage();
+            
+            image.create(background.getGlobalBounds().width, background.getGlobalBounds().height, sf::Color::Transparent);
+            image.copy(imageTemp, 0, 0,
+                       sf::IntRect(background.getPosition().x, background.getPosition().y + bar.getGlobalBounds().height, background.getGlobalBounds().width, background.getGlobalBounds().height - bar.getGlobalBounds().height));
+                       
+            
+            image.saveToFile(filename);
+        }
+        States::setStatus(States::EXPORT_IMG, false);
+    }
+    
     menu.addEventHandler(window, event);
     bar.addEventHandler(window, event);
 }

@@ -56,6 +56,15 @@ sf::Color ColorBar::getBackGroundColor(){
     return backgroundColor.getColor();
 }
 
+void ColorBar::setTextColor(sf::Color color){
+    textColor.setColor(color);
+}
+
+
+void ColorBar::setBackGroundColor(sf::Color color){
+    backgroundColor.setColor(color);
+}
+
 void ColorBar::draw(sf::RenderTarget &window, sf::RenderStates states) const{
     window.draw(textColor);
     window.draw(textLabel);

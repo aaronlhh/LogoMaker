@@ -18,6 +18,8 @@ int States::WINDOW_HEIGHT = 1400;
 std::map<States::Image, bool> States::loadImage;
 sf::Texture States::fileTexture;
 sf::Texture States::DirTexture;
+string States::fileToOpen;
+std::map<States::MenuBar, bool> States::status;
 
 bool States::isStateEnabled(ObjectState state){
     return states[state];
@@ -136,4 +138,14 @@ sf::Font& States::getFont(fonts font, fontStyle style){
                 return fontList[font].at(2);
             }
     }
+}
+
+
+bool States::isStatusSet(MenuBar key){
+    return status[key];
+}
+
+
+void States::setStatus(MenuBar key, bool set){
+    status[key] = set;
 }

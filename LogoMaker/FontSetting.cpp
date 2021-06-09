@@ -37,6 +37,30 @@ void FontSetting::setPosition(float x, float y){
     styleList.setPosition(x + fontList.getGlobalBounds().width + 30, fontList.getPosition().y);
 }
 
+void FontSetting::setFont(States::fonts font, States::fontStyle style){
+    if(font == States::ARIAL){
+        fontList.setText("Arial");
+    }else if(font == States::VERDANA){
+        fontList.setText("Verdana");
+    }else if(font == States::COURIER_NEW){
+        fontList.setText("Courier New");
+    }else{
+        fontList.setText("Times New Roman");
+    }
+    
+    
+    if(style == States::REGULAR){
+        styleList.setText("Regular");
+    }else if(style == States::BOLD){
+        styleList.setText("Bold");
+    }else{
+        styleList.setText("Italics");
+    }
+    
+    setPosition(label.getPosition().x, label.getPosition().y);
+    
+}
+
 
 States::fonts FontSetting::getFont(){
     string font = fontList.getText();

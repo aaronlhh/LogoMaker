@@ -28,6 +28,12 @@
 		93385FB82670183100F5396F /* FileItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FB62670183100F5396F /* FileItem.cpp */; };
 		93385FBB26701AF100F5396F /* folder.png in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FB926701AF100F5396F /* folder.png */; };
 		93385FBC26701AF100F5396F /* file.png in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FBA26701AF100F5396F /* file.png */; };
+		93385FBF267021C300F5396F /* FileNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FBD267021C300F5396F /* FileNode.cpp */; };
+		93385FC22670264F00F5396F /* FileTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FC02670264F00F5396F /* FileTree.cpp */; };
+		93385FC526702A5000F5396F /* projs in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FC326702A5000F5396F /* projs */; };
+		93385FC626702A5000F5396F /* images in Copy Files */ = {isa = PBXBuildFile; fileRef = 93385FC426702A5000F5396F /* images */; };
+		93385FC926706B7100F5396F /* NewFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FC726706B7100F5396F /* NewFile.cpp */; };
+		93385FCB2670735400F5396F /* BottomMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93385FCA2670735400F5396F /* BottomMenu.cpp */; };
 		935050A02666F4B4002CCAA2 /* ColorSquare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */; };
 		935050A32666FA17002CCAA2 /* ColorList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935050A12666FA17002CCAA2 /* ColorList.cpp */; };
 		935050A626670C60002CCAA2 /* ColorGradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935050A426670C60002CCAA2 /* ColorGradient.cpp */; };
@@ -57,16 +63,17 @@
 		936ADFCA2660399300A0AF0F /* History.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC22660399300A0AF0F /* History.hpp */; };
 		936ADFCB2660399300A0AF0F /* MouseEvents.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC32660399300A0AF0F /* MouseEvents.hpp */; };
 		936ADFCC2660399300A0AF0F /* EventHandler.hpp in Copy Files */ = {isa = PBXBuildFile; fileRef = 936ADFC42660399300A0AF0F /* EventHandler.hpp */; };
-		936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		936ADF9D266032CB00A0AF0F /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
+				93385FC526702A5000F5396F /* projs in Copy Files */,
+				93385FC626702A5000F5396F /* images in Copy Files */,
 				93385FBB26701AF100F5396F /* folder.png in Copy Files */,
 				93385FBC26701AF100F5396F /* file.png in Copy Files */,
 				931AF31C2667FE1100CBFF6D /* Verdana.ttf in Copy Files */,
@@ -124,6 +131,15 @@
 		93385FB72670183100F5396F /* FileItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileItem.hpp; sourceTree = "<group>"; };
 		93385FB926701AF100F5396F /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		93385FBA26701AF100F5396F /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
+		93385FBD267021C300F5396F /* FileNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileNode.cpp; sourceTree = "<group>"; };
+		93385FBE267021C300F5396F /* FileNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileNode.hpp; sourceTree = "<group>"; };
+		93385FC02670264F00F5396F /* FileTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileTree.cpp; sourceTree = "<group>"; };
+		93385FC12670264F00F5396F /* FileTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileTree.hpp; sourceTree = "<group>"; };
+		93385FC326702A5000F5396F /* projs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = projs; path = LogoMaker/projs; sourceTree = "<group>"; };
+		93385FC426702A5000F5396F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = LogoMaker/images; sourceTree = "<group>"; };
+		93385FC726706B7100F5396F /* NewFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NewFile.cpp; sourceTree = "<group>"; };
+		93385FC826706B7100F5396F /* NewFile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NewFile.hpp; sourceTree = "<group>"; };
+		93385FCA2670735400F5396F /* BottomMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BottomMenu.cpp; sourceTree = "<group>"; };
 		9350509E2666F4B4002CCAA2 /* ColorSquare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSquare.cpp; sourceTree = "<group>"; };
 		9350509F2666F4B4002CCAA2 /* ColorSquare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ColorSquare.hpp; sourceTree = "<group>"; };
 		935050A12666FA17002CCAA2 /* ColorList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorList.cpp; sourceTree = "<group>"; };
@@ -166,7 +182,6 @@
 		936ADFC22660399300A0AF0F /* History.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = History.hpp; sourceTree = "<group>"; };
 		936ADFC32660399300A0AF0F /* MouseEvents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MouseEvents.hpp; sourceTree = "<group>"; };
 		936ADFC42660399300A0AF0F /* EventHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EventHandler.hpp; sourceTree = "<group>"; };
-		936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BottomMenu.cpp; sourceTree = "<group>"; };
 		936ADFCE26606F7A00A0AF0F /* BottomMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BottomMenu.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +204,8 @@
 		936ADF96266032CB00A0AF0F = {
 			isa = PBXGroup;
 			children = (
+				93385FC426702A5000F5396F /* images */,
+				93385FC326702A5000F5396F /* projs */,
 				936ADFA1266032CB00A0AF0F /* LogoMaker */,
 				936ADFA0266032CB00A0AF0F /* Products */,
 				936ADFA92660363900A0AF0F /* Frameworks */,
@@ -233,7 +250,7 @@
 				936ADFA2266032CB00A0AF0F /* main.cpp */,
 				936ADFB42660381600A0AF0F /* Slider.cpp */,
 				936ADFB52660381600A0AF0F /* Slider.hpp */,
-				936ADFCD26606F7A00A0AF0F /* BottomMenu.cpp */,
+				93385FCA2670735400F5396F /* BottomMenu.cpp */,
 				936ADFCE26606F7A00A0AF0F /* BottomMenu.hpp */,
 				93516F8F2665834E00DE7F32 /* LogoMaker.cpp */,
 				93516F902665834E00DE7F32 /* LogoMaker.hpp */,
@@ -273,6 +290,12 @@
 				9336974F266EC5DB00E7B03E /* WindowDialog.hpp */,
 				93385FB62670183100F5396F /* FileItem.cpp */,
 				93385FB72670183100F5396F /* FileItem.hpp */,
+				93385FBD267021C300F5396F /* FileNode.cpp */,
+				93385FBE267021C300F5396F /* FileNode.hpp */,
+				93385FC02670264F00F5396F /* FileTree.cpp */,
+				93385FC12670264F00F5396F /* FileTree.hpp */,
+				93385FC726706B7100F5396F /* NewFile.cpp */,
+				93385FC826706B7100F5396F /* NewFile.hpp */,
 			);
 			path = LogoMaker;
 			sourceTree = "<group>";
@@ -345,27 +368,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93385FCB2670735400F5396F /* BottomMenu.cpp in Sources */,
 				93385FB82670183100F5396F /* FileItem.cpp in Sources */,
 				9369EB36266C8C3400D6D00C /* MenuBar.cpp in Sources */,
 				93516F9A2665886F00DE7F32 /* Typing.cpp in Sources */,
 				931AF3082667F0BF00CBFF6D /* ColorBar.cpp in Sources */,
 				936ADFBA2660396C00A0AF0F /* History.cpp in Sources */,
+				93385FBF267021C300F5396F /* FileNode.cpp in Sources */,
 				936ADFBB2660396C00A0AF0F /* Snapshot.cpp in Sources */,
 				93516F9D2665908100DE7F32 /* TextInput.cpp in Sources */,
 				935050A926672C6E002CCAA2 /* ColorPicker.cpp in Sources */,
 				931AF32426680DD400CBFF6D /* InputBox.cpp in Sources */,
+				93385FC926706B7100F5396F /* NewFile.cpp in Sources */,
 				931AF32126680B5A00CBFF6D /* Item.cpp in Sources */,
 				935050A02666F4B4002CCAA2 /* ColorSquare.cpp in Sources */,
 				935050A32666FA17002CCAA2 /* ColorList.cpp in Sources */,
 				931AF32D26681F3A00CBFF6D /* FontSetting.cpp in Sources */,
 				936ADFBC2660396C00A0AF0F /* States.cpp in Sources */,
-				936ADFCF26606F7A00A0AF0F /* BottomMenu.cpp in Sources */,
 				931AF327266818E800CBFF6D /* ItemList.cpp in Sources */,
 				93516F97266586F900DE7F32 /* Cursor.cpp in Sources */,
 				9369EB39266C97DA00D6D00C /* Menu.cpp in Sources */,
 				93369750266EC5DB00E7B03E /* WindowDialog.cpp in Sources */,
 				935050A626670C60002CCAA2 /* ColorGradient.cpp in Sources */,
 				931AF32A26681D1200CBFF6D /* DropDownMenu.cpp in Sources */,
+				93385FC22670264F00F5396F /* FileTree.cpp in Sources */,
 				936ADFB62660381600A0AF0F /* Slider.cpp in Sources */,
 				936ADFA3266032CB00A0AF0F /* main.cpp in Sources */,
 				93516F912665834E00DE7F32 /* LogoMaker.cpp in Sources */,

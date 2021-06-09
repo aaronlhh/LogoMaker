@@ -8,14 +8,14 @@
 #ifndef WindowDialog_hpp
 #define WindowDialog_hpp
 #include "GUIComponent.hpp"
-#include "FileItem.hpp"
+#include "FileTree.hpp"
+#include <filesystem>
+namespace fs = std::__fs::filesystem;
 
 class WindowDialog{
 public:
     WindowDialog();
-    
     void run();
-    
     
 private:
     sf::RenderWindow window;

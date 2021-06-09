@@ -106,24 +106,26 @@ void MenuBar::update(){
         if(i->isClicked()){
             string word = i->getClicked();
             if(word == "Open Project"){
-                cout << "Open proj\n";
-//                window.setPosition(100, 100);
                 window.run();
             }else if(word == "Close Project"){
-                cout << "Close Project\n";
+                States::setStatus(States::CLOSE_PROJ, true);
             }else if(word == "New Project"){
                 cout << "New Project\n";
+                States::setStatus(States::NEW_PROJ, true);
             }else if(word == "Save Project"){
-                cout << "Save Project\n";
+                States::setStatus(States::SAVE_PROJ, true);
             }else if(word == "Quit"){
-                cout << "Quit\n";
+                States::setStatus(States::QUIT, true);
             }else if(word == "Redo"){
                 cout << "Redo\n";
+                States::setStatus(States::REDO, true);
             }else if(word == "Undo"){
                 cout << "Undo\n";
+                States::setStatus(States::UNDO, true);
             }else if(word == "Export Image"){
-                cout << "export\n";
+                States::setStatus(States::EXPORT_IMG, true);
             }
         }
+        
     }
 }

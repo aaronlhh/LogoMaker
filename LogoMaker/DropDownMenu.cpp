@@ -55,6 +55,7 @@ void DropDownMenu::addEventHandler(sf::RenderWindow& window, sf::Event event){
     if(appear){
         menu.addEventHandler(window, event);
     }
+    setPosition(x, y);
 }
 
 
@@ -71,6 +72,7 @@ void DropDownMenu::update(){
     }else{
         box.setFillColor(sf::Color::Transparent);
     }
+    setPosition(x, y);
 }
 
 
@@ -96,6 +98,10 @@ void DropDownMenu::add(string item){
     }
     menu.add(item);
     setPosition(box.getPosition().x, box.getPosition().y);
+}
+
+void DropDownMenu::setText(string text){
+    box.setText(text);
 }
 
 

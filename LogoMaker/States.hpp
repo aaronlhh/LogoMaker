@@ -33,7 +33,12 @@ public:
     
     // fileTree images
     enum Image { FILE_ICON, DIRECTORY_ICON };
+    enum MenuBar {OPEN_PROJ, CLOSE_PROJ, NEW_PROJ, SAVE_PROJ, QUIT, REDO, UNDO, EXPORT_IMG};
+    static std::map<MenuBar, bool> status;
     static std::map<Image, bool> loadImage;
+    static bool isStatusSet(MenuBar key);
+    static void setStatus(MenuBar key, bool set);
+    static string fileToOpen;
     static sf::Texture fileTexture;
     static sf::Texture DirTexture;
 

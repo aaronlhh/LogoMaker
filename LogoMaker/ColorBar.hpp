@@ -25,6 +25,10 @@ public:
     sf::Color getTextColor();
     sf::Color getBackGroundColor();
     
+    // mutators
+    void setTextColor(sf::Color color);
+    void setBackGroundColor(sf::Color color);
+    
     // override
     void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void addEventHandler(sf::RenderWindow& window, sf::Event event);
